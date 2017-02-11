@@ -52,7 +52,7 @@ uint32_t		unit_load(const char *name, int (*test_fun)(void))
 	printf("\t> %s :", name);
 	pid = fork();
 	if (pid > 0) //father
-		waitpid(-1, &ret, WUNTRACED); //TODO: check -1 and if arg needed (NOHANG?)
+		wait(&ret); //TODO: check -1 and if arg needed (NOHANG?)
 	else if (pid == 0) //child
 		exit(test_fun());
 	if (pid == -1)

@@ -15,8 +15,8 @@
 
 void	unit_print(uint32_t r)
 {
-	if (GET_TOT(r) != GET_SUC(r))
-		printf("%sSuccess: %d, Failure: %d, Total: %d\n", RED, GET_SUC(r), GET_TOT(r) - GET_SUC(r), GET_TOT(r));
+	if (UNIT_TOT(r) != UNIT_SUC(r))
+		printf("%sSuccess: %d, Failure: %d, Total: %d\n", RED, UNIT_SUC(r), UNIT_TOT(r) - UNIT_SUC(r), UNIT_TOT(r));
 	else
-		printf("%sSuccess: %d, Failure: %d, Total: %d\n", GRN, GET_SUC(r), GET_TOT(r) - GET_SUC(r), GET_TOT(r));
+		printf("%sSuccess: %d, Failure: %d, Total: %d\n", GRN, UNIT_SUC(r), UNIT_TOT(r) - UNIT_SUC(r), UNIT_TOT(r));
 }
