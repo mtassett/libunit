@@ -1,0 +1,4 @@
+[submodule "libft"]
+	path = libft
+	url = https://mtassett@bitbucket.org/mtassett/home_libft.git
+	branch = master
