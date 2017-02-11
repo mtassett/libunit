@@ -14,51 +14,26 @@
 #include "../inc/libft.h"
 #include <sys/wait.h>
 
-static uint32_t	print_result(int wstatus)
+//Add a test to the test list, return EXIT_FAILURE or EXIT_SUCCESS
+int		unit_load(t_unit **alst, const char *name, int (*test_fun)(void))
 {
-	int		sig;
+	t_unit	*new;
+	t_unit	*tmp;
 
-	if (WIFEXITED(wstatus))
-	{
-		if (WEXITSTATUS(wstatus) == EXIT_SUCCESS)
-		{
-			printf(GRN "[OK]\n" RST);
-			return (0x10001);
-		}
-		else
-			printf(RED "[KO]\n" RST);
-	}
-	else if (WIFSIGNALED(wstatus))
-	{
-		sig = WTERMSIG(wstatus);
-		if (sig == SIGTERM)
-			printf(RED "[SEGV]\n" RST);
-		else if (sig == SIGBUS)
-			printf(RED "[BUSE]\n" RST);
-		else
-			printf(YLW "[SIG %d]\n" RST, sig);
-	}
+	if (!(new = malloc(sizeof(t_unit))))
+		return (EXIT_FAILURE);
+	new->u_name = name;
+	new->u_test = test_fun;
+	new->u_next = NULL;
+	new->u_ret = 0xBADC0FFE;
+	if (!*alst)
+		*alst = new;
 	else
-		printf(CYA "[WTF]\n" RST);
-	return (0x10000);
+	{
+		tmp = *alst;
+		while (tmp->u_next)
+			tmp = tmp->u_next;
+		tmp->u_next = new;
+	}
+	return (EXIT_SUCCESS);
 }
-
-//Load test_fun and check return value + print line and result
-uint32_t		unit_load(const char *name, int (*test_fun)(void))
-{
-	int		ret;
-	pid_t	pid;
-	
-	printf("\t> %s :", name);
-	pid = fork();
-	if (pid > 0) //father
-		wait(&ret); //TODO: check -1 and if arg needed (NOHANG?)
-	else if (pid == 0) //child
-		exit(test_fun());
-	if (pid == -1)
-		printf(CYA "[Fork failed]\n" RST);
-	else
-		return (print_result(ret));
-	return (0x10000);
-}
-
