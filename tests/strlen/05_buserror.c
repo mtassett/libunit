@@ -1,44 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   01_basic_test.c                                    :+:      :+:    :+:   */
+/*   05_buserror.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtassett <mtassett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/02/11 00:51:45 by mtassett          #+#    #+#             */
-/*   Updated: 2017/02/11 01:03:13 by mtassett         ###   ########.fr       */
+/*   Created: 2017/02/11 01:05:09 by mtassett          #+#    #+#             */
+/*   Updated: 2017/02/11 01:05:56 by mtassett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../inc/libft.h"
-#include <strings.h>
 
-//test a string with all characters code before '\0'
-int basic_test(void)
+int	buserror(void)
 {
-	char	str[256];
-	int		c;
+	char	*str = "yolo";
 
-	c = 1;
-	while (c <= 0xFF)
-	{
-		str[c - 1] = (char)c;
-		++c;
-	}
-	str[255] = '\0';
-	if (ft_strlen(str) == strlen(str))
-		return (EXIT_SUCCESS);
-	else
-		return (EXIT_FAILURE);
+	str[0]  = 'b';
+	return (EXIT_SUCCESS);
 }
-
-/*
-** int main()
-** {
-**	if (basic_test() == EXIT_SUCCESS)
-**		printf("OK\n");
-**	else
-**		printf("KO\n");
-**	return (0);
-**}
-*/
