@@ -14,8 +14,9 @@ NAME =		test
 NAME_PATH =	./
 SRC_PATH =	./
 
-VPATH = ./:./strlen
-SRC_NAME =	main.c 00_launcher.c 01_basic_test.c 02_null_test.c 03_segv_test.c 04_big_test.c 05_buserror.c 06_timeout.c
+VPATH = .:strlen
+SRC_NAME =	main.c 00_launcher.c 01_basic_test.c 02_null_test.c 03_segv_test.c\
+			04_big_test.c 05_buserror.c 06_timeout.c
 
 
 OBJ_PATH =	./obj/
