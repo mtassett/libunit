@@ -62,8 +62,9 @@ void					unit_log(t_unit *unit, int reset)
 {
 	static int	fd = 0;
 
-	if (reset)
+	if (reset && fd > 0)
 	{
+		write(fd, "\n", 1);
 		close(fd);
 		fd = 0;
 	}

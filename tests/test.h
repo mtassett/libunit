@@ -12,13 +12,14 @@
 
 #ifndef TEST_H
 # define TEST_H
+# include <stdint.h>
 
-int		strlen_launcher(void);
-int		basic_test(void);
-int		null_test(void);
-int		segv_test(void);
-int		big_test(void);
-int		buserror(void);
-int		timeout_test(void);
+uint32_t	strlen_launcher(void);
+int			basic_test(void);
+int			null_test(void);
+int			segv_test(void);
+int			big_test(void);
+int			buserror(void);
+int			timeout_test(void);
 
 #endif
