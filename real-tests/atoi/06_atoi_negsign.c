@@ -6,18 +6,18 @@
 /*   By: nozanne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/12 20:46:43 by nozanne           #+#    #+#             */
-/*   Updated: 2017/02/12 20:46:57 by nozanne          ###   ########.fr       */
+/*   Updated: 2017/02/12 21:11:36 by nozanne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
+#include "test.h"
 
 int		atoi_negsign(void)
 {
-	char	*str;
+	const char	str[] = "-";
 
-	str[7] = "-";
 	if (ft_atoi(str) == atoi(str))
 		return (EXIT_SUCCESS);
 	else

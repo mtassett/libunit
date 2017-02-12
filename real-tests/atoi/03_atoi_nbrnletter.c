@@ -6,18 +6,18 @@
 /*   By: nozanne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/12 20:44:23 by nozanne           #+#    #+#             */
-/*   Updated: 2017/02/12 20:45:39 by nozanne          ###   ########.fr       */
+/*   Updated: 2017/02/12 21:08:37 by nozanne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
+#include "test.h"
 
 int		atoi_nbrnletter(void)
 {
-	char	*str;
+	const char	str[] = "123def";
 
-	str[7] = "123def";
 	if (ft_atoi(str) == atoi(str))
 		return (EXIT_SUCCESS);
 	else

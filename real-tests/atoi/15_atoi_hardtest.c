@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   04_atoi_spaces.c                                   :+:      :+:    :+:   */
+/*   15_atoi_hardtest.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nozanne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/02/12 20:45:52 by nozanne           #+#    #+#             */
-/*   Updated: 2017/02/12 21:29:10 by nozanne          ###   ########.fr       */
+/*   Created: 2017/02/12 21:18:26 by nozanne           #+#    #+#             */
+/*   Updated: 2017/02/12 21:19:01 by nozanne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 #include "libft.h"
 #include "test.h"
 
-int		atoi_spaces(void)
+int		atoi_hardtest(void)
 {
-	const char	str[] = "       ";
+	const char	str[] = "rwhup+jir   -15gjisnla";
 
 	if (ft_atoi(str) == atoi(str))
 		return (EXIT_SUCCESS);

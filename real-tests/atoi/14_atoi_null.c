@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   04_atoi_spaces.c                                   :+:      :+:    :+:   */
+/*   14_atoi_null.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nozanne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/02/12 20:45:52 by nozanne           #+#    #+#             */
-/*   Updated: 2017/02/12 21:29:10 by nozanne          ###   ########.fr       */
+/*   Created: 2017/02/12 21:28:09 by nozanne           #+#    #+#             */
+/*   Updated: 2017/02/12 21:29:36 by nozanne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 #include "libft.h"
 #include "test.h"
 
-int		atoi_spaces(void)
+int		atoi_null(void)
 {
-	const char	str[] = "       ";
+	const char	str[] = "NULL";
 
 	if (ft_atoi(str) == atoi(str))
 		return (EXIT_SUCCESS);
