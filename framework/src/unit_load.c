@@ -6,12 +6,14 @@
 /*   By: mtassett <mtassett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/10 22:20:55 by mtassett          #+#    #+#             */
-/*   Updated: 2017/02/11 02:15:58 by mtassett         ###   ########.fr       */
+/*   Updated: 2017/02/12 01:34:53 by nozanne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/libunit.h"
-#include "../inc/libft.h"
+//#include "../inc/libft.h"
+#include <stdio.h>
+#include <stdlib.h>
 #include <sys/wait.h>
 
 //Add a test to the test list, return EXIT_FAILURE or EXIT_SUCCESS

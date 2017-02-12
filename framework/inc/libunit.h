@@ -6,12 +6,13 @@
 /*   By: mtassett <mtassett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/11 00:13:41 by mtassett          #+#    #+#             */
-/*   Updated: 2017/02/11 02:07:35 by mtassett         ###   ########.fr       */
+/*   Updated: 2017/02/12 04:27:47 by nozanne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBUNIT_H
 # define LIBUNIT_H
+# include <stdio.h>
 #define GRN				"\x1b[32m"
 #define RED				"\x1b[31m"
 #define RST 			"\x1b[0m"
@@ -50,7 +51,7 @@ int					unit_run(t_unit *list, int *total);
 ** print advanced result (Success/ fail [segv] [buse] [other sig]
 ** 
 */
-int					unit_result(t_list *list, int total);
+int					unit_result(t_unit *list, int total);
 
 
 #endif

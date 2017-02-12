@@ -49,7 +49,7 @@ $(NAME): $(OBJ)
 	@$(ECHO) "\x1b[32mDone!"
 	@$(ECHO) "\x1b[33mObject files created, Now generating lib...\x1b[0m"
 	@$(AR) $(NAME_PATH)$(NAME) $(OBJ)
-	@$(ECHO) "\x1b[32mDone!\nLibft compilation sucessfull!\x1b[0m"
+	@$(ECHO) "\x1b[32mDone!\nLibft compilation successfull!\x1b[0m"
 
 $(OBJ_PATH)%.o: $(SRC_PATH)%.c
 	@mkdir -p $(OBJ_PATH)
@@ -74,7 +74,7 @@ re: fclean all
 
 norme:
 	$(NORM) $(SRC)
-	$(NORM) $(INC_PATH)libft.h
+	$(NORM) $(INC_PATH)libf.h
 
 .NOTPARALLEL: re
 .PHONY: all $(NAME) clean fclean re norme
