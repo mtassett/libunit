@@ -10,10 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../framework/inc/libunit.h"
+#include "libunit.h"
+#include "test.h"
 #include <fcntl.h>
 
-int		main(int ac, char **av)
+int		main(void)
 {
 	uint32_t	ret;
 

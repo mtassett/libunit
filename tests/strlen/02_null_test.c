@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../framework/inc/libft.h"
+#include "libft.h"
 
 int		null_test(void)
 {

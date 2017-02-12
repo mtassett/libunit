@@ -29,12 +29,14 @@ static void		print_line(const char *str)
 
 static int		print_sig(int sig)
 {
-	if (sig == SIGTERM)
-		write(1, "\x1b[31m[SEGV]\n\x1b[0m", 15);
+	if (sig == SIGSEGV)
+		write(1, "\x1b[31m[SEGV]\n\x1b[0m", 16);
 	else if (sig == SIGBUS)
-		write(1, "\x1b[31m[BUSE]\n\x1b[0m", 15);
+		write(1, "\x1b[31m[BUSE]\n\x1b[0m", 16);
+	else if (sig == SIGALRM)
+		write(1, "\x1b[31m[TIME]\n\x1b[0m", 16);
 	else
-		write(1, "\x1b[31m[SIG]\n\x1b[0m", 14);
+		write(1, "\x1b[31m[SIG]\n\x1b[0m", 15);
 	return (sig);
 }	
 

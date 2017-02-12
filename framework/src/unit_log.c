@@ -15,6 +15,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <fcntl.h>
+#include <sys/stat.h>
 
 static inline size_t	unit_strlen(const char *str)
 {
@@ -29,25 +30,25 @@ static inline size_t	unit_strlen(const char *str)
 static inline void		write_result(int res, int fd)
 {
 	if (res == EXIT_SUCCESS)
-		write(fd, "[OK]\n", 5);
+		write(fd, " [OK]\n", 6);
 	else if (res == -1)
-		write(fd, "[KO]\n", 5);
+		write(fd, " [KO]\n", 6);
 	else if ((unsigned)res == (unsigned)0xBADC0FFE)
-		write(fd, "[INIT_ERROR]\n", 13);
+		write(fd, " [INIT]\n", 8);
 	else if (res == EWTF)
-		write(fd, "[WTF]\n", 6);
+		write(fd, " [WTF]\n", 7);
 	else if (res == EFORK)
-		write(fd, "[FORK_FAILED]\n", 14);
+		write(fd, " [FORK]\n", 8);
 	else if (res > 0)
 	{
-		if (res == SIGTERM)
-			write(fd, "[SEGV]\n", 7);
+		if (res == SIGSEGV)
+			write(fd, " [SEGV]\n", 8);
 		else if (res == SIGBUS)
-			write(fd, "[BUSE]\n", 7);
+			write(fd, " [BUSE]\n", 8);
 		else if (res == SIGALRM)
-			write(fd, "[TIMEOUT]\n", 10);
+			write(fd, " [TIME]\n", 8);
 		else
-			write(fd, "[SIG]\n", 6);
+			write(fd, " [SIG]\n", 7);
 	}
 	else
 		write(fd, "\n", 1);
@@ -69,11 +70,15 @@ void					unit_log(t_unit *unit, int reset)
 	else
 	{
 		if (fd == 0)
-			fd = open("./libunit.log", O_CREAT | O_RDWR);
-		if (fd == -1)
 		{
-			fd = 0;
-			return ;
+			fd = open("./libunit.log", O_CREAT | O_RDWR | O_APPEND);
+			if (fd == -1)
+			{
+				fd = 0;
+				return ;
+			}
+			else
+				chmod("./libunit.log", S_IRUSR | S_IWUSR);
 		}
 		write(fd, unit->u_name, unit_strlen(unit->u_name));
 		write_result(unit->u_ret, fd);

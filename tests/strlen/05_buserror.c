@@ -10,13 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/libft.h"
+#include "libft.h"
 
 int		buserror(void)
 {
 	char	*str;
 
-	*str = "yolo";
+	str = "yolo";
 	str[0] = 'b';
 	return (EXIT_SUCCESS);
 }

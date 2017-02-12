@@ -10,10 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/libft.h"
-#include "../inc/libunit.h"
+#include "libft.h"
+#include "libunit.h"
+#include "test.h"
 
-	strlen_launcher(void)
+int		strlen_launcher(void)
 {
 	t_unit	*test_list;
 	int		total;
@@ -26,6 +27,8 @@
 	unit_load(&test_list, "NULL test", &null_test);
 	unit_load(&test_list, "SEGV test", &segv_test);
 	unit_load(&test_list, "Big test", &big_test);
+	unit_load(&test_list, "Bus Error", &buserror);
+	unit_load(&test_list, "Time out", &timeout_test);
 	fail = unit_run(test_list, &total);
 	return (unit_out(&test_list, total, fail));
 }

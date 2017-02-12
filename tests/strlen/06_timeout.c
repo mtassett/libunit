@@ -11,14 +11,11 @@
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include <stdlib.h>
 
 int		timeout_test(void)
 {
-	size_t	i;
-
-	i = 1;
-	while (i)
-		i++;
-	return (1);
+	while (42)
+		;
+	return (EXIT_SUCCESS);
 }
-

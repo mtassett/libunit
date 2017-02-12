@@ -12,6 +12,7 @@
 
 #include "../inc/libunit.h"
 #include <unistd.h>
+#include <stdio.h>
 
 /*
 ** #include "../inc/libft.h" **
@@ -46,14 +47,18 @@ static void				write_num(int i)
 	char	buf[12];
 	size_t	siz;
 	size_t	len;
+	size_t	cur;
 
 	siz = getnsiz(i);
-	buf[siz--] = '\0';
 	len = siz;
-	while (siz)
+	buf[siz--] = '\0';
+	cur = 0;
+	while (cur < len)
 	{
 		buf[siz--] = i % 10 + '0';
+
 		i /= 10;
+		++cur;
 	}
 	write(1, buf, len);
 }
@@ -74,12 +79,13 @@ int						unit_print(uint32_t r)
 		write(1, GRN, sizeof(GRN) - 1);
 		ret = 0;
 	}
-	write(1, "Success: ", 9);
+	write(1, "\nSuccess: ", 10);
 	write_num(total - fail);
 	write(1, " Fail: ", 7);
 	write_num(fail);
 	write(1, " Total: ", 8);
 	write_num(total);
 	write(1, "\n\x1b[0m", 5);
+	unit_log(NULL, 1);
 	return (ret);
 }

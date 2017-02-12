@@ -1,25 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   04_big_test.c                                      :+:      :+:    :+:   */
+/*   test.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtassett <mtassett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/02/11 01:15:34 by mtassett          #+#    #+#             */
-/*   Updated: 2017/02/11 01:19:51 by mtassett         ###   ########.fr       */
+/*   Created: 2017/02/12 20:42:04 by mtassett          #+#    #+#             */
+/*   Updated: 2017/02/12 20:43:43 by mtassett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <strings.h>
-#include "libft.h"
+#ifndef TEST_H
+# define TEST_H
 
-int	big_test(void)
-{
-	char str[(size_t)0xFFFFFFFFF0];
+int		strlen_launcher(void);
+int		basic_test(void);
+int		null_test(void);
+int		segv_test(void);
+int		big_test(void);
+int		buserror(void);
+int		timeout_test(void);
 
-	memset(str, 'A', UINT32_MAX + 0xF);
-	if (ft_strlen(str) == strlen(str))
-		return (EXIT_SUCCESS);
-	else
-		return (EXIT_FAILURE);
-}
+#endif
