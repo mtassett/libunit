@@ -6,7 +6,7 @@
 /*   By: mtassett <mtassett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/11 01:20:29 by mtassett          #+#    #+#             */
-/*   Updated: 2017/02/12 08:50:58 by nozanne          ###   ########.fr       */
+/*   Updated: 2017/02/12 19:02:11 by nozanne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,5 @@ int		main(int ac, char **av)
 
 	ret = 0;
 	ret += strlen_launcher();
-	unit_print(ret);
-	return (0);
+	return (unit_print(ret));
 }

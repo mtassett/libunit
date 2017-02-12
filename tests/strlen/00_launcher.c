@@ -6,7 +6,7 @@
 /*   By: mtassett <mtassett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/11 00:30:49 by mtassett          #+#    #+#             */
-/*   Updated: 2017/02/11 01:56:30 by mtassett         ###   ########.fr       */
+/*   Updated: 2017/02/12 19:05:22 by nozanne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@
 	int		total;
 	int		fail;
 
-
 	test_list = NULL;
 	total = 0;
 	write(1, "STRLEN:\n", 8);
@@ -28,6 +27,5 @@
 	unit_load(&test_list, "SEGV test", &segv_test);
 	unit_load(&test_list, "Big test", &big_test);
 	fail = unit_run(test_list, &total);
-	return (unit_out(total, fail));
+	return (unit_out(&test_list, total, fail));
 }
-
