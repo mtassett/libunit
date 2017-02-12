@@ -13,16 +13,21 @@
 #include "../inc/libft.h"
 #include "../inc/libunit.h"
 
-uint32_t	strlen_launcher(void)
+	strlen_launcher(void)
 {
-	uint32_t	result;
+	t_unit	*test_list;
+	int		total;
+	int		fail;
 
-	result = 0;
-	printf("STRLEN:\n");
-	result += load_test("Basic test", &basic_test);
-	result += load_test("NULL test", &null_test);
-	result += load_test("SEGV test", &segv_test);
-	result += load_test("Big test", &big_test);
-	return (result);
+
+	test_list = NULL;
+	total = 0;
+	write(1, "STRLEN:\n", 8);
+	unit_load(&test_list, "Basic test", &basic_test);
+	unit_load(&test_list, "NULL test", &null_test);
+	unit_load(&test_list, "SEGV test", &segv_test);
+	unit_load(&test_list, "Big test", &big_test);
+	fail = unit_run(test_list, &total);
+	return (unit_out(total, fail));
 }
 
