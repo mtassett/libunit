@@ -77,4 +77,4 @@ norme:
 	$(NORM) $(INC_PATH)libf.h
 
 .NOTPARALLEL: re
-.PHONY: all $(NAME) clean fclean re norme
+.PHONY: all clean fclean re norme
