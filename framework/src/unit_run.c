@@ -6,7 +6,7 @@
 /*   By: mtassett <mtassett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/10 22:20:55 by mtassett          #+#    #+#             */
-/*   Updated: 2017/02/12 05:19:17 by nozanne          ###   ########.fr       */
+/*   Updated: 2017/02/12 05:28:16 by nozanne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include <stdlib.h>
 #include <fcntl.h>
 
-static void		print_line(const char *str)
+static void		print_line(const char *str, int fd_line)
 {
 	const char	*tmp;
 
@@ -31,7 +31,7 @@ static void		print_line(const char *str)
 	write(fd_line, " : ", 3);
 }
 
-static int		print_sig(int sig, fd_file)
+static int		print_sig(int sig, int fd_file)
 {
 	if (sig == SIGTERM)
 	{
@@ -49,7 +49,7 @@ static int		print_sig(int sig, fd_file)
 	return (sig);
 }	
 
-static int	print_result(int wstatus, fd_file)
+static int	print_result(int wstatus, int fd_file)
 {
 	if (WIFEXITED(wstatus))
 	{
@@ -76,11 +76,10 @@ static int	print_result(int wstatus, fd_file)
 	return (EWTF);
 }
 
-static void	unit_exec(t_unit *list)
+static void	unit_exec(t_unit *list, int fd_line)
 {
 	pid_t		pid;
 	int			status;
-	int static 	fd_file;
 
 	pid = fork();
 	fd_file = open("./libunit_file", O_CREAT | O_RDWR);
@@ -106,17 +105,17 @@ static void	unit_exec(t_unit *list)
 //return the number of failed tests
 int		unit_run(t_unit *list, int *tot)
 {
-	int		ret;
-
+	int			ret;
+	int static 	fd_file;
+	
 	ret = 0;
 	while (list)
 	{
-		print_line(list->u_name);
+		print_line(list->u_name, fd_file);
 		*tot = *tot + 1;
-		unit_exec(list);
+		unit_exec(list, fd_line);
 		if (list->u_ret != EXIT_SUCCESS)
 			++ret;
-		unit_log(list);
 		list = list->u_next;
 	}
 	return (ret);
