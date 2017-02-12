@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   unit_out.c                                         :+:      :+:    :+:   */
+/*   15_atoi_hardtest.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtassett <mtassett@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nozanne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/02/11 02:09:34 by mtassett          #+#    #+#             */
-/*   Updated: 2017/02/12 19:15:56 by nozanne          ###   ########.fr       */
+/*   Created: 2017/02/12 21:18:26 by nozanne           #+#    #+#             */
+/*   Updated: 2017/02/12 21:19:01 by nozanne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/libunit.h"
-#include <stdint.h>
 #include <stdlib.h>
+#include "libft.h"
+#include "test.h"
 
-uint32_t	unit_out(t_unit **first, int total, int fail)
+int		atoi_hardtest(void)
 {
-	if (*first)
-	{
-		unit_free(*first);
-		*first = NULL;
-	}
-	return ((unsigned)((unsigned short)total << 16 | (unsigned short)fail));
+	const char	str[] = "rwhup+jir   -15gjisnla";
+
+	if (ft_atoi(str) == atoi(str))
+		return (EXIT_SUCCESS);
+	else
+		return (EXIT_FAILURE);
 }
