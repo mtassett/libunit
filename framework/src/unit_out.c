@@ -12,6 +12,7 @@
 
 #include "../inc/libunit.h"
 #include <stdint.h>
+#include <stdlib.h>
 
 uint32_t	unit_out(t_unit **first, int total, int fail)
 {
