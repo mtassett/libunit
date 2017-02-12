@@ -6,14 +6,14 @@
 /*   By: mtassett <mtassett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/11 00:30:49 by mtassett          #+#    #+#             */
-/*   Updated: 2017/02/12 19:05:22 by nozanne          ###   ########.fr       */
+/*   Updated: 2017/02/12 19:53:18 by nozanne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/libft.h"
 #include "../inc/libunit.h"
 
-	strlen_launcher(void)
+uint32_t	strlen_launcher(void)
 {
 	t_unit	*test_list;
 	int		total;
