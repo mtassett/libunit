@@ -6,11 +6,13 @@
 /*   By: nozanne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/12 18:46:38 by nozanne           #+#    #+#             */
-/*   Updated: 2017/02/12 21:28:34 by nozanne          ###   ########.fr       */
+/*   Updated: 2017/02/12 21:44:44 by nozanne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include <stdio.h>
+#include "../test.h"
 
 uint32_t	atoi_launcher(void)
 {
