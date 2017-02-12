@@ -6,7 +6,7 @@
 /*   By: mtassett <mtassett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/10 22:20:55 by mtassett          #+#    #+#             */
-/*   Updated: 2017/02/12 05:28:16 by nozanne          ###   ########.fr       */
+/*   Updated: 2017/02/12 05:50:34 by nozanne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,6 @@ static void	unit_exec(t_unit *list, int fd_line)
 	int			status;
 
 	pid = fork();
-	fd_file = open("./libunit_file", O_CREAT | O_RDWR);
 	if (pid > 0) //father
 		wait(&status);
 	else if (pid == 0) //child
@@ -98,7 +97,6 @@ static void	unit_exec(t_unit *list, int fd_line)
 	}
 	else
 		list->u_ret = print_result(status, fd_file);
-	close(fd_file);
 }
 
 //Load test list, execute + print line and result
@@ -109,6 +107,7 @@ int		unit_run(t_unit *list, int *tot)
 	int static 	fd_file;
 	
 	ret = 0;
+	fd_file = open("./libunit_file", O_CREAT | O_RDWR);
 	while (list)
 	{
 		print_line(list->u_name, fd_file);
@@ -118,6 +117,7 @@ int		unit_run(t_unit *list, int *tot)
 			++ret;
 		list = list->u_next;
 	}
+	close(fd_file);
 	return (ret);
 }
 

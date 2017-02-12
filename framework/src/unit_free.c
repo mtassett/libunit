@@ -6,7 +6,7 @@
 /*   By: mtassett <mtassett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/11 02:09:34 by mtassett          #+#    #+#             */
-/*   Updated: 2017/02/11 02:15:25 by mtassett         ###   ########.fr       */
+/*   Updated: 2017/02/12 06:40:28 by nozanne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,17 @@
 
 void	unit_free(t_list *unit)
 {
-	t_unit	*curr;
-	t_unit	*prev;
+	t_list	*tmp;
+	t_list 	*list;
 
-	curr = unit;
-	prev = NULL;
-	//TODO: finish it
+	list = unit;
+	while (list)
+	{
+		if (list->next);
+			tmp = list->next;
+		else
+			tmp = NULL;
+		free(list);
+		list = tmp;
+	}
 }
