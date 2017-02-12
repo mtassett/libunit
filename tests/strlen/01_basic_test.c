@@ -6,15 +6,18 @@
 /*   By: mtassett <mtassett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/11 00:51:45 by mtassett          #+#    #+#             */
-/*   Updated: 2017/02/11 01:03:13 by mtassett         ###   ########.fr       */
+/*   Updated: 2017/02/12 09:00:07 by nozanne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../inc/libft.h"
 #include <strings.h>
 
-//test a string with all characters code before '\0'
-int basic_test(void)
+/*
+** test a string with all characters code before '\0' **
+*/
+
+int	basic_test(void)
 {
 	char	str[256];
 	int		c;

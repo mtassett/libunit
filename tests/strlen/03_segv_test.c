@@ -6,13 +6,13 @@
 /*   By: mtassett <mtassett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/11 01:05:09 by mtassett          #+#    #+#             */
-/*   Updated: 2017/02/11 01:05:56 by mtassett         ###   ########.fr       */
+/*   Updated: 2017/02/12 08:53:46 by nozanne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../inc/libft.h"
 
-int	segv_test(void)
+int		segv_test(void)
 {
 	ft_strlen((void*)0x42);
 	return (EXIT_SUCCESS);
