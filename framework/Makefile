@@ -13,7 +13,7 @@
 NAME =		libunit.a
 NAME_PATH =	./
 SRC_PATH =	./src/
-SRC_NAME =	unit_load.c unit_print.c
+SRC_NAME =	unit_free.c unit_load.c unit_log.c unit_out.c unit_print.c unit_run.c
 
 OBJ_PATH =	./obj/
 OBJ_NAME =	$(SRC_NAME:.c=.o)
@@ -23,7 +23,7 @@ SRC =		$(addprefix $(SRC_PATH),$(SRC_NAME))
 OBJ =		$(addprefix $(OBJ_PATH),$(OBJ_NAME))
 INC =		$(addprefix -I,$(INC_PATH))
 
-CFLAGS =	-Wall -Werror -Wextra -c -march=native -fno-builtin -g #-fsanitize=address
+CFLAGS =	-Wall -Werror -Wextra -c -march=native -Winline -fno-builtin -O2 -g #-fsanitize=address
 UNAME :=	$(shell uname)
 
 

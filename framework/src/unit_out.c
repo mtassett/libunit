@@ -13,7 +13,12 @@
 #include "../inc/libunit.h"
 #include <stdint.h>
 
-uint32_t	unit_out(int total, int fail)
+uint32_t	unit_out(t_unit **first, int total, int fail)
 {
+	if (*first)
+	{
+		unit_free(*first);
+		*first = NULL;
+	}
 	return ((unsigned)((unsigned short)total << 16 | (unsigned short)fail));
 }

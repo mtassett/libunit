@@ -38,7 +38,12 @@ typedef struct		s_unit
 ** Add a test to the test list, return EXIT_FAILURE or EXIT_SUCCESS
 */
 int					unit_load(t_unit **alst, const char *name, int (*f)(void));
-void				unit_print(uint32_t result);
+
+/*
+** Print the result of all tests from the custom uint32_t
+** Return -1 if a test failed, or 0 if all were successfull
+*/
+int					unit_print(uint32_t result);
 
 /*
 ** Run all the tests in list, and return the number of failed tests
@@ -50,5 +55,20 @@ int					unit_run(t_unit *list, int *total);
 ** print advanced result (Success/ fail [segv] [buse] [other sig] **
 */
 int					unit_result(t_unit *list, int total);
+
+/*
+** Write logs to ./libunit.log
+*/
+void				unit_log(t_unit *unit, int reset);
+
+/*
+** Free the t_unit list
+*/
+void				unit_free(t_unit *unit);
+
+/*
+** Call unit_free and return tot/fail for unit_result
+*/
+uint32_t			unit_out(t_unit **first, int tot, int fail);
 
 #endif

@@ -11,18 +11,18 @@
 /* ************************************************************************** */
 
 #include "../inc/libunit.h"
-#include <stdint.h>
+#include <stdlib.h>
 
-void	unit_free(t_list *unit)
+void	unit_free(t_unit *unit)
 {
-	t_list	*tmp;
-	t_list 	*list;
+	t_unit	*tmp;
+	t_unit 	*list;
 
 	list = unit;
 	while (list)
 	{
-		if (list->next);
-			tmp = list->next;
+		if (list->u_next)
+			tmp = list->u_next;
 		else
 			tmp = NULL;
 		free(list);
