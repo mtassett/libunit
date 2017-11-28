@@ -10,36 +10,42 @@
 #*                                                                            *#
 #* ************************************************************************** *#
 
-NAME =		libunit.a
-NAME_PATH =	./
-SRC_PATH =	./src/
-SRC_NAME =	unit_free.c unit_load.c unit_log.c unit_out.c unit_print.c unit_run.c
+NAME :=		libunit.a
+NAME_PATH :=	./
+SRC_PATH :=	./src/
+SRC_NAME :=	unit_free.c unit_load.c unit_log.c unit_out.c unit_print.c unit_run.c
 
-OBJ_PATH =	./obj/
-OBJ_NAME =	$(SRC_NAME:.c=.o)
-INC_PATH = 	./inc/
+OBJ_PATH :=	./obj/
+OBJ_NAME :=	$(SRC_NAME:.c=.o)
+INC_PATH := 	./inc/
 
-SRC =		$(addprefix $(SRC_PATH),$(SRC_NAME))
-OBJ =		$(addprefix $(OBJ_PATH),$(OBJ_NAME))
-INC =		$(addprefix -I,$(INC_PATH))
+SRC :=		$(addprefix $(SRC_PATH),$(SRC_NAME))
+OBJ :=		$(addprefix $(OBJ_PATH),$(OBJ_NAME))
+INC :=		$(addprefix -I,$(INC_PATH))
 
-CFLAGS =	-Wall -Werror -Wextra -c -march=native -Winline -fno-builtin -O2 -g #-fsanitize=address
+CFLAGS :=	-Wall -Werror -Wextra -c -march=native -Winline -fno-builtin -O2 -g #-fsanitize=address
 UNAME :=	$(shell uname)
 
 
 ifeq ($(UNAME), Darwin)
-ECHO = echo
-NORM = norminette
-CC = gcc
-AR = ar -ruvcs
+	ECHO := echo
+	NORM := norminette
+	CC := gcc
+	AR := ar -ruvcs
 endif
 ifeq ($(UNAME), Linux)
-ECHO = echo -e
-CC = clang
-NORM = 42norminette
-AR = ar -rucvsU
-CFLAGS += -Wno-unused-result
+	ECHO := echo -e
+	CC := clang
+	NORM := 42norminette
+	AR := ar -rucvsU
+	CFLAGS += -Wno-unused-result
 endif
+ifeq ($(findstring CYGWIN_NT-,$(UNAME)), CYGWIN_NT-)
+	ECHO := echo -e
+	CC := clang
+	AR := ar -rucvsU
+endif
+
 
 all: $(NAME)
 
