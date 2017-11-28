@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   08_atoi_intmin.c                                   :+:      :+:    :+:   */
+/*   01_ft_strlen_basic.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nozanne <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: mtassett <mtassett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/02/12 20:47:27 by nozanne           #+#    #+#             */
-/*   Updated: 2017/02/12 21:12:55 by nozanne          ###   ########.fr       */
+/*   Created: 2017/02/12 20:43:52 by mtassett          #+#    #+#             */
+/*   Updated: 2017/02/12 21:46:51 by mtassett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 #include "libft.h"
 #include "test.h"
 
-int		atoi_intmin(void)
+int		strlen_basic(void)
 {
-	const char	str[] = "-2147483648";
+	const char	str[] = "012345";
 
-	if (ft_atoi(str) == atoi(str))
+	if (ft_strlen(str) == strlen(str))
 		return (EXIT_SUCCESS);
 	else
 		return (EXIT_FAILURE);

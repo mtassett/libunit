@@ -1,24 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   08_atoi_intmin.c                                   :+:      :+:    :+:   */
+/*   02_ft_strlen_char_bound.c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nozanne <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: mtassett <mtassett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/02/12 20:47:27 by nozanne           #+#    #+#             */
-/*   Updated: 2017/02/12 21:12:55 by nozanne          ###   ########.fr       */
+/*   Created: 2017/02/12 20:43:52 by mtassett          #+#    #+#             */
+/*   Updated: 2017/02/12 21:46:51 by mtassett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include <limits.h>
 #include "libft.h"
 #include "test.h"
 
-int		atoi_intmin(void)
+int		strlen_char_bound(void)
 {
-	const char	str[] = "-2147483648";
+	char	buf[UINT8_MAX + 2];
 
-	if (ft_atoi(str) == atoi(str))
+	for (size_t i = 0; i <= UINT8_MAX; i++)
+		buf[i] = i;
+	buf[0] = 'S';
+	buf[UINT8_MAX + 1] = '\0'; 
+	if (ft_strlen(buf) == strlen(buf))
 		return (EXIT_SUCCESS);
 	else
 		return (EXIT_FAILURE);

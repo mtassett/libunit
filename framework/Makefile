@@ -42,8 +42,9 @@ ifeq ($(UNAME), Linux)
 endif
 ifeq ($(findstring CYGWIN_NT-,$(UNAME)), CYGWIN_NT-)
 	ECHO := echo -e
-	CC := clang
+	CC := gcc
 	AR := ar -rucvsU
+	CFLAGS += -m64
 endif
 
 
@@ -54,7 +55,7 @@ $(NAME): $(OBJ)
 	@mkdir -p $(NAME_PATH)
 	@$(ECHO) "\x1b[32mDone!"
 	@$(ECHO) "\x1b[33mObject files created, Now generating lib...\x1b[0m"
-	@$(AR) $(NAME_PATH)$(NAME) $(OBJ)
+	$(AR) $(NAME_PATH)$(NAME) $(OBJ)
 	@$(ECHO) "\x1b[32mDone!\n$(NAME) compilation successfull!\x1b[0m"
 
 $(OBJ_PATH)%.o: $(SRC_PATH)%.c

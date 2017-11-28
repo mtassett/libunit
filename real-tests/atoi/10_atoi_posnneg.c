@@ -12,7 +12,7 @@
 
 #include <stdlib.h>
 #include "libft.h"
-#include "text.h"
+#include "test.h"
 
 int		atoi_posnneg(void)
 {

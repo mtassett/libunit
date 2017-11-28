@@ -10,38 +10,49 @@
 #*                                                                            *#
 #* ************************************************************************** *#
 
-NAME =		real-test
-NAME_PATH =	./
-SRC_PATH =	./
-VPATH = .:atoi:
-SRC_NAME = main.c 00_atoi_launcher.c 01_atoi_nbr.c 02_atoi_letter.c 03_atoi_nbrnletter.c \
-04_atoi_spaces.c 05_atoi_negnbr.c 06_atoi_negsign.c 07_atoi_possign.c 08_atoi_intmin.c \
-09_atoi_intmax.c 10_atoi_posnneg.c 11_atoi_blank.c 12_atoi_zero.c 13_atoi_nothing.c  \
-14_atoi_null.c 15_atoi_hardtest.c 
+NAME :=		real-test
+NAME_PATH :=	./
+SRC_PATH :=	./
+VPATH := .:atoi:ft_strlen
+SRC_NAME :=	main.c \
+			00_atoi_launcher.c 01_atoi_nbr.c 02_atoi_letter.c \
+			03_atoi_nbrnletter.c 04_atoi_spaces.c 05_atoi_negnbr.c \
+			06_atoi_negsign.c 07_atoi_possign.c 08_atoi_intmin.c \
+			09_atoi_intmax.c 10_atoi_posnneg.c 11_atoi_blank.c 12_atoi_zero.c \
+			13_atoi_nothing.c 14_atoi_null.c 15_atoi_hardtest.c \
+			00_ft_strlen_launcher.c 01_ft_strlen_basic.c \
+			02_ft_strlen_char_bound.c 03_ft_strlen_size_bound.c \
+			04_ft_strlen_dirty_buff.c 05_ft_strlen_null.c
 
 
-OBJ_PATH =	./obj/
-OBJ_NAME =	$(SRC_NAME:.c=.o)
-INC_PATH = 	../framework/inc ../libft/inc .
 
-SRC =		$(addprefix $(SRC_PATH),$(SRC_NAME))
-OBJ =		$(addprefix $(OBJ_PATH),$(OBJ_NAME))
-INC =		$(addprefix -I,$(INC_PATH))
+OBJ_PATH :=	./obj/
+OBJ_NAME :=	$(SRC_NAME:.c=.o)
+INC_PATH := 	../framework/inc ../libft/inc .
 
-CFLAGS =	-Wall -Werror -Wextra -c -march=native -fno-builtin -O2 -g #-fsanitize=address
+SRC :=		$(addprefix $(SRC_PATH),$(SRC_NAME))
+OBJ :=		$(addprefix $(OBJ_PATH),$(OBJ_NAME))
+INC :=		$(addprefix -I,$(INC_PATH))
+
+CFLAGS :=	-Wall -Werror -Wextra -c -march=native -fno-builtin -O2 -g #-fsanitize=address
 UNAME :=	$(shell uname)
 
 
 ifeq ($(UNAME), Darwin)
-ECHO = echo
-NORM = norminette
-CC = gcc
+	ECHO := echo
+	NORM := norminette
+	CC := gcc
 endif
 ifeq ($(UNAME), Linux)
-ECHO = echo -e
-CC = clang
-NORM = 42norminette
-CFLAGS += -Wno-unused-result
+	ECHO := echo -e
+	CC := clang
+	NORM := 42norminette
+	CFLAGS += -Wno-unused-result
+endif
+ifeq ($(findstring CYGWIN_NT-,$(UNAME)),CYGWIN_NT-)
+	ECHO := echo -e
+	CC := gcc
+	CFLAGS += -m64
 endif
 
 all: $(NAME)
@@ -51,7 +62,7 @@ link: $(OBJ) libunit libft
 	@mkdir -p $(NAME_PATH)
 	@$(ECHO) "\x1b[32mDone!"
 	@$(ECHO) "\x1b[33mObject files created, Now linking...\x1b[0m"
-	@$(CC) -o $(NAME_PATH)$(NAME) -L../libft -lft -L../framework -lunit $(INC) $(OBJ)
+	$(CC) -o $(NAME_PATH)$(NAME) -L../libft -lft -L../framework -lunit $(INC) $(OBJ)
 	@$(ECHO) "\x1b[32mDone!\nUnit test compilation sucessfull!\x1b[0m"
 
 $(NAME): link
