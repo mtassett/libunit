@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   00_strlen_launcher.c                               :+:      :+:    :+:   */
+/*   00_atoi_launcher.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nozanne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/12 18:46:38 by nozanne           #+#    #+#             */
-/*   Updated: 2017/12/20 16:57:33 by mtassett         ###   ########.fr       */
+/*   Updated: 2018/01/05 16:28:17 by mtassett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <stdio.h>
 #include "../test.h"
 
-uint32_t	strlen_launcher(void)
+uint32_t	getunsiz_launcher(void)
 {
 	t_unit	*test_list;
 	int		total;
@@ -22,12 +22,10 @@ uint32_t	strlen_launcher(void)
 
 	test_list = NULL;
 	total = 0;
-	write(1, "FT_STRLEN:\n", 11);
-	unit_load(&test_list, "Strlen Basic:", &strlen_basic);
-	unit_load(&test_list, "Strlen Char Boundaries:", &strlen_char_bound);
-	unit_load(&test_list, "Strlen Size Boundaries", &strlen_size_bound);
-	unit_load(&test_list, "Strlen Dirty Buffer:", &strlen_dirty_buff);
-	unit_load(&test_list, "Strlen Null Protection:", &strlen_null);
+	write(1, "GETUNSIZ:\n", 10);
+	unit_load(&test_list, "getunsiz basics", &getunsiz_basic);
+	unit_load(&test_list, "getunsiz limits", &getunsiz_limit);
+	unit_load(&test_list, "getunsiz mid", &getunsiz_mid);
 	fail = unit_run(test_list, &total);
 	return (unit_out(&test_list, total, fail));
 }

@@ -1,28 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   01_ft_strlen_basic.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtassett <mtassett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/02/11 01:20:29 by mtassett          #+#    #+#             */
-/*   Updated: 2018/01/05 16:25:15 by mtassett         ###   ########.fr       */
+/*   Created: 2017/02/12 20:43:52 by mtassett          #+#    #+#             */
+/*   Updated: 2018/01/05 16:23:21 by mtassett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libunit.h"
+#include <stdlib.h>
+#include "libft.h"
 #include "test.h"
-#include <fcntl.h>
 
-int		main(void)
+int		getunsiz_mid(void)
 {
-	uint32_t	ret;
-
-	ret = 0;
-	ret += strlen_launcher();
-	ret += strlen2_launcher();
-	ret += getnsiz_launcher();
-	ret += getunsiz_launcher();
-	ret += atoi_launcher();
-	return (unit_print(ret));
+	if (ft_getunsiz(10) != 2 || ft_getunsiz(42) != 2
+			|| ft_getunsiz(100) != 3 || ft_getunsiz(1000) != 4
+			|| ft_getunsiz(10000) != 5 || ft_getunsiz(100000) != 6
+			|| ft_getunsiz(1000000) != 7 || ft_getunsiz(10000000) != 8
+			|| ft_getunsiz(100000000) != 9 || ft_getunsiz(1000000000) != 10)
+		return (EXIT_FAILURE);
+	return (EXIT_SUCCESS);
 }

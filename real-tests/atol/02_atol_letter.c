@@ -1,28 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   02_atoi_letter.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtassett <mtassett@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nozanne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/02/11 01:20:29 by mtassett          #+#    #+#             */
-/*   Updated: 2018/01/05 16:25:15 by mtassett         ###   ########.fr       */
+/*   Created: 2017/02/12 20:44:08 by nozanne           #+#    #+#             */
+/*   Updated: 2017/12/26 15:31:22 by mtassett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libunit.h"
+#include <stdlib.h>
+#include "libft.h"
 #include "test.h"
-#include <fcntl.h>
 
-int		main(void)
+int		atoi_letter(void)
 {
-	uint32_t	ret;
+	const char	str[] = "abcdef";
 
-	ret = 0;
-	ret += strlen_launcher();
-	ret += strlen2_launcher();
-	ret += getnsiz_launcher();
-	ret += getunsiz_launcher();
-	ret += atoi_launcher();
-	return (unit_print(ret));
+	if (memcmp(ft_atol(str), "0", 2) == 0)
+		return (EXIT_SUCCESS);
+	else
+		return (EXIT_FAILURE);
 }

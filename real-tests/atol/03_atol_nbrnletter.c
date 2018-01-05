@@ -1,28 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   03_atoi_nbrnletter.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtassett <mtassett@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nozanne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/02/11 01:20:29 by mtassett          #+#    #+#             */
-/*   Updated: 2018/01/05 16:25:15 by mtassett         ###   ########.fr       */
+/*   Created: 2017/02/12 20:44:23 by nozanne           #+#    #+#             */
+/*   Updated: 2017/02/12 21:08:37 by nozanne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libunit.h"
+#include <stdlib.h>
+#include "libft.h"
 #include "test.h"
-#include <fcntl.h>
 
-int		main(void)
+int		atoi_nbrnletter(void)
 {
-	uint32_t	ret;
+	const char	str[] = "123def";
 
-	ret = 0;
-	ret += strlen_launcher();
-	ret += strlen2_launcher();
-	ret += getnsiz_launcher();
-	ret += getunsiz_launcher();
-	ret += atoi_launcher();
-	return (unit_print(ret));
+	if (ft_atoi(str) == atoi(str))
+		return (EXIT_SUCCESS);
+	else
+		return (EXIT_FAILURE);
 }

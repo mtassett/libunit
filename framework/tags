@@ -1,0 +1,66 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+BUFF_SIZE_GNL	inc/libft.h	39;"	d
+CPU_RELAX	inc/libft.h	38;"	d
+CYA	inc/libunit.h	19;"	d
+GET_SUC	inc/libunit.h	22;"	d
+GET_TOT	inc/libunit.h	21;"	d
+GRN	inc/libunit.h	15;"	d
+LIBFT_H	inc/libft.h	14;"	d
+LIBUNIT_H	inc/libunit.h	14;"	d
+RED	inc/libunit.h	16;"	d
+RST	inc/libunit.h	17;"	d
+TAB0	inc/libft.h	33;"	d
+TAB1	inc/libft.h	24;"	d
+TAB2	inc/libft.h	25;"	d
+TAB3	inc/libft.h	26;"	d
+TAB4	inc/libft.h	27;"	d
+TAB5	inc/libft.h	28;"	d
+TAB6	inc/libft.h	29;"	d
+TAB7	inc/libft.h	30;"	d
+TAB8	inc/libft.h	31;"	d
+TAB9	inc/libft.h	32;"	d
+TABA	inc/libft.h	34;"	d
+TABB	inc/libft.h	35;"	d
+TABC	inc/libft.h	36;"	d
+UTOA	inc/libft.h	37;"	d
+YLW	inc/libunit.h	18;"	d
+content_size	inc/libft.h	/^	size_t			content_size;$/;"	m	struct:s_btree
+content_size	inc/libft.h	/^	size_t			content_size;$/;"	m	struct:s_dlst
+content_size	inc/libft.h	/^	size_t			content_size;$/;"	m	struct:s_list
+content	inc/libft.h	/^	void			*content;$/;"	m	struct:s_btree
+content	inc/libft.h	/^	void			*content;$/;"	m	struct:s_dlst
+content	inc/libft.h	/^	void			*content;$/;"	m	struct:s_list
+left	inc/libft.h	/^	struct s_btree	*left;$/;"	m	struct:s_btree	typeref:struct:s_btree::s_btree
+n_buf	inc/libft.h	/^	char			*n_buf;$/;"	m	struct:s_node
+n_fd	inc/libft.h	/^	int				n_fd;$/;"	m	struct:s_node
+next	inc/libft.h	/^	struct s_dlst	*next;$/;"	m	struct:s_dlst	typeref:struct:s_dlst::s_dlst
+next	inc/libft.h	/^	struct s_list	*next;$/;"	m	struct:s_list	typeref:struct:s_list::s_list
+prev	inc/libft.h	/^	struct s_dlst	*prev;$/;"	m	struct:s_dlst	typeref:struct:s_dlst::s_dlst
+print_result	src/unit_load.c	/^static uint32_t	print_result(int wstatus)$/;"	f	file:
+right	inc/libft.h	/^	struct s_btree	*right;$/;"	m	struct:s_btree	typeref:struct:s_btree::s_btree
+s_btree	inc/libft.h	/^typedef struct		s_btree$/;"	s
+s_dlst	inc/libft.h	/^typedef struct		s_dlst$/;"	s
+s_list	inc/libft.h	/^typedef struct		s_list$/;"	s
+s_node	inc/libft.h	/^typedef struct		s_node$/;"	s
+s_siz	inc/libft.h	/^	size_t			s_siz;$/;"	m	struct:s_sstr
+s_sstr	inc/libft.h	/^typedef struct		s_sstr$/;"	s
+s_str	inc/libft.h	/^	char			*s_str;$/;"	m	struct:s_sstr
+s_vec	inc/libft.h	/^typedef struct		s_vec$/;"	s
+t_btree	inc/libft.h	/^}					t_btree;$/;"	t	typeref:struct:s_btree
+t_dlst	inc/libft.h	/^}					t_dlst;$/;"	t	typeref:struct:s_dlst
+t_int128	inc/libft.h	/^typedef __int128_t	t_int128;$/;"	t
+t_list	inc/libft.h	/^}					t_list;$/;"	t	typeref:struct:s_list
+t_node	inc/libft.h	/^}					t_node;$/;"	t	typeref:struct:s_node
+t_str	inc/libft.h	/^}					t_str;$/;"	t	typeref:struct:s_sstr
+t_uint128	inc/libft.h	/^typedef	__uint128_t	t_uint128;$/;"	t
+t_vec	inc/libft.h	/^}					t_vec;$/;"	t	typeref:struct:s_vec
+unit_load	src/unit_load.c	/^uint32_t		unit_load(const char *name, int (*test_fun)(void))$/;"	f
+unit_print	src/unit_print.c	/^void	unit_print(uint32_t r)$/;"	f
+v_data	inc/libft.h	/^	void			**v_data;$/;"	m	struct:s_vec
+v_lim	inc/libft.h	/^	size_t			v_lim;$/;"	m	struct:s_vec
+v_siz	inc/libft.h	/^	size_t			v_siz;$/;"	m	struct:s_vec

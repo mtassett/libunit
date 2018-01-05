@@ -1,0 +1,6 @@
+syn keyword CTagsStructure s_sstr s_btree s_list s_vec s_node s_dlst
+syn keyword CTagsMember v_lim next content_size content s_str n_buf left v_siz s_siz right prev v_data n_fd
+syn keyword CTagsFunction print_result unit_load unit_print
+syn keyword CTagsType t_str t_node t_dlst t_uint128 t_list t_vec t_int128 t_btree
+syn keyword CTagsDefinedName BUFF_SIZE_GNL GET_TOT TAB7 TAB5 UTOA TAB3 GET_SUC LIBFT_H TAB2 TABA CYA TAB8 GRN TAB9 LIBUNIT_H YLW TAB1 RED TABB TAB0 RST TAB6 TABC TAB4 CPU_RELAX
+

@@ -1,28 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   02_ft_strlen_char_bound.c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtassett <mtassett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/02/11 01:20:29 by mtassett          #+#    #+#             */
-/*   Updated: 2018/01/05 16:25:15 by mtassett         ###   ########.fr       */
+/*   Created: 2017/02/12 20:43:52 by mtassett          #+#    #+#             */
+/*   Updated: 2017/12/20 18:51:37 by mtassett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libunit.h"
+#include <stdlib.h>
+#include <limits.h>
+#include "libft.h"
 #include "test.h"
-#include <fcntl.h>
 
-int		main(void)
+int		strlen2_char_bound(void)
 {
-	uint32_t	ret;
+	char	buf[UINT8_MAX + 2];
 
-	ret = 0;
-	ret += strlen_launcher();
-	ret += strlen2_launcher();
-	ret += getnsiz_launcher();
-	ret += getunsiz_launcher();
-	ret += atoi_launcher();
-	return (unit_print(ret));
+	for (size_t i = 0; i <= UINT8_MAX; i++)
+		buf[i] = i;
+	buf[0] = 'S';
+	buf[UINT8_MAX + 1] = '\0'; 
+	if (ft_strlen2(buf) == strlen(buf))
+		return (EXIT_SUCCESS);
+	else
+		return (EXIT_FAILURE);
 }
