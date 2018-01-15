@@ -13,7 +13,7 @@
 NAME :=		real-test
 NAME_PATH :=	./
 SRC_PATH :=	./
-VPATH := .:atoi:ft_strlen:strlen2:getnsiz:getunsiz
+VPATH := .:atoi:ft_strlen:strlen2:getnsiz:getunsiz:memcmp:strchr
 SRC_NAME :=	main.c \
 			00_atoi_launcher.c 01_atoi_nbr.c 02_atoi_letter.c \
 			03_atoi_nbrnletter.c 04_atoi_spaces.c 05_atoi_negnbr.c \
@@ -23,7 +23,9 @@ SRC_NAME :=	main.c \
 			00_ft_strlen_launcher.c 01_ft_strlen_basic.c 02_ft_strlen_char_bound.c 03_ft_strlen_size_bound.c 04_ft_strlen_dirty_buff.c 05_ft_strlen_null.c \
 			00_strlen2_launcher.c 01_strlen2_basic.c 02_strlen2_char_bound.c 03_strlen2_size_bound.c 04_strlen2_dirty_buff.c 05_strlen2_null.c \
 			00_getnsiz_launcher.c 01_getnsiz_basic.c 02_getnsiz_limit.c 03_getnsiz_mid.c \
-			00_getunsiz_launcher.c 01_getunsiz_basic.c 02_getunsiz_limit.c 03_getunsiz_mid.c
+			00_getunsiz_launcher.c 01_getunsiz_basic.c 02_getunsiz_limit.c 03_getunsiz_mid.c \
+			00_memcmp_launcher.c 01_memcmp_basic_equal.c 02_memcmp_basic_uneq.c 03_memcmp_basic_siz.c 04_memcmp_basic_siz2.c 05_memcmp_med_equal.c 06_memcmp_med_uneq.c \
+			00_strchr_launcher.c 01_strchr_search_char.c 02_strchr_space.c 03_strchr_search_abs.c
 
 OBJ_PATH :=	./obj/
 OBJ_NAME :=	$(SRC_NAME:.c=.o)

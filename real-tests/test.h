@@ -57,4 +57,17 @@ int			getunsiz_basic(void);
 int			getunsiz_limit(void);
 int			getunsiz_mid(void);
 
+uint32_t	strchr_launcher(void);
+int			strchr_search_char(void);
+int			strchr_space(void);
+int			strchr_search_abs(void);
+
+uint32_t	memcmp_launcher(void);
+int			memcmp_basic_equal(void);
+int			memcmp_basic_uneq(void);
+int			memcmp_basic_siz(void);
+int			memcmp_basic_siz2(void);
+int			memcmp_med_equal(void);
+int			memcmp_med_uneq(void);
+
 #endif

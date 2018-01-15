@@ -19,10 +19,13 @@
 
 int		strlen_size_bound(void)
 {
-	char	*buf = malloc(UINT64_MAX);
-	__uint128_t		i = 0;
-	__uint128_t		prev;
+	printf("Size_max: %llu\n", SIZE_MAX);
+	char	*buf = malloc((size_t)(UINT32_MAX + 5000));
+	size_t	i = 0;
 
+	if (!buf)
+		return (EXIT_FAILURE);
+	bzero(buf, UINT32_MAX + 50000);
 	if (ft_strlen(buf) != strlen(buf))
 		return (EXIT_FAILURE);
 	while (i < 128)
@@ -32,19 +35,10 @@ int		strlen_size_bound(void)
 			return (EXIT_FAILURE);
 		++i;
 	}
-	while (i <= UINT32_MAX)
-	{
-		prev = i;
-		i += INCVAL;
-		memset(buf + prev, '1', INCVAL);
-		if (ft_strlen(buf) != strlen(buf))
-			return (EXIT_FAILURE);
-	}
-	memset(buf + i, '2', 1 << 20);
-	i += (1 << 20);
+	memset(buf, '1', UINT32_MAX - 1);
 	if (ft_strlen(buf) != strlen(buf))
 		return (EXIT_FAILURE);
-	memset(buf + i, '3', SIZE_MAX - 1);
+	memset(buf + UINT32_MAX, '2', 40000);
 	if (ft_strlen(buf) != strlen(buf))
 		return (EXIT_FAILURE);
 	return (EXIT_SUCCESS);
