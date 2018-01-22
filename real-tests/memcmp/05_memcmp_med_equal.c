@@ -1,31 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   05_memcmp_med_equal.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtassett <mtassett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/02/11 01:20:29 by mtassett          #+#    #+#             */
-/*   Updated: 2018/01/22 19:07:32 by mtassett         ###   ########.fr       */
+/*   Created: 2017/02/12 23:13:17 by mtassett          #+#    #+#             */
+/*   Updated: 2017/02/12 23:36:12 by nozanne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libunit.h"
 #include "test.h"
-#include <fcntl.h>
 
-int		main(void)
+int		memcmp_med_equal(void)
 {
-	uint32_t	ret;
+	const char	s1[] = "abcdefghijklmnopqrsuvwxyz";
+	const char	s2[] = "abcdefghijklmnopqrsuvwxyz";
 
-	ret = 0;
-	ret += strlen_launcher();
-	ret += atoi_launcher();
-	ret += strlen2_launcher();
-	ret += getnsiz_launcher();
-	ret += getunsiz_launcher();
-	ret += atoi_launcher();
-	ret += strchr_launcher();
-	ret += memcmp_launcher();
-	return (unit_print(ret));
+	if (ft_memcmp(s1, s2, 16) == memcmp(s1, s2, 16))
+		return (EXIT_SUCCESS);
+	else
+		return (EXIT_FAILURE);
 }

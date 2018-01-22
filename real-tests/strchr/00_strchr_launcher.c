@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   00_ft_strlen_launcher.c                            :+:      :+:    :+:   */
+/*   00_strchr_launcher.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nozanne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/02/12 18:46:38 by nozanne           #+#    #+#             */
-/*   Updated: 2018/01/22 19:01:40 by mtassett         ###   ########.fr       */
+/*   Created: 2017/02/12 23:11:23 by nozanne           #+#    #+#             */
+/*   Updated: 2017/02/12 23:15:54 by nozanne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stdio.h>
-#include "../test.h"
+#include "test.h"
 
-uint32_t	strlen_launcher(void)
+uint32_t	strchr_launcher(void)
 {
 	t_unit	*test_list;
 	int		total;
@@ -22,12 +22,10 @@ uint32_t	strlen_launcher(void)
 
 	test_list = NULL;
 	total = 0;
-	write(1, "FT_STRLEN:\n", 11);
-	unit_load(&test_list, "Strlen Basic:", &strlen_basic);
-	unit_load(&test_list, "Strlen Char Boundaries:", &strlen_char_bound);
-	unit_load(&test_list, "Strlen Size Boundaries", &strlen_size_bound);
-	unit_load(&test_list, "Strlen Dirty Buffer:", &strlen_dirty_buff);
-	unit_load(&test_list, "Strlen Null Protection:", &strlen_null);
+	write(1, "STRCHR:\n", 8);
+	unit_load(&test_list, "Strchr search char", &strchr_search_char);
+	unit_load(&test_list, "Strchr space", &strchr_space);
+	unit_load(&test_list, "Strchr search abs", &strchr_search_abs);
 	fail = unit_run(test_list, &total);
 	return (unit_out(&test_list, total, fail));
 }
