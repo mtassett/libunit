@@ -6,7 +6,7 @@
 /*   By: mtassett <mtassett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/11 02:09:34 by mtassett          #+#    #+#             */
-/*   Updated: 2017/02/12 08:39:07 by nozanne          ###   ########.fr       */
+/*   Updated: 2017/12/11 18:22:54 by mtassett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,6 @@
 #include <unistd.h>
 #include <stdio.h>
 
-/*
-** #include "../inc/libft.h" **
-*/
 static inline size_t	getnsiz(int n)
 {
 	size_t	r;
@@ -66,7 +63,8 @@ static void				write_num(int i)
 int						unit_print(uint32_t r)
 {
 	const int	total = UNIT_TOT(r);
-	const int	fail = UNIT_TOT(r) - UNIT_SUC(r);
+	const int	fail = UNIT_FAIL(r);
+	const int	succ = total - fail;
 	int			ret;
 
 	if (fail != 0)
@@ -80,7 +78,7 @@ int						unit_print(uint32_t r)
 		ret = 0;
 	}
 	write(1, "\nSuccess: ", 10);
-	write_num(total - fail);
+	write_num(succ);
 	write(1, " Fail: ", 7);
 	write_num(fail);
 	write(1, " Total: ", 8);

@@ -6,7 +6,7 @@
 /*   By: mtassett <mtassett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/11 00:13:41 by mtassett          #+#    #+#             */
-/*   Updated: 2017/02/12 08:37:52 by nozanne          ###   ########.fr       */
+/*   Updated: 2017/12/11 18:50:05 by mtassett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 # define EFORK			0x666
 # define UNIT_TIMEOUT	10
 # define UNIT_TOT(x)	((int)((x) >> 16))
-# define UNIT_SUC(x)	((int)((x) & 0xFFFF))
+# define UNIT_FAIL(x)	((int)((x) & 0xFFFF))
 
 typedef struct		s_unit
 {

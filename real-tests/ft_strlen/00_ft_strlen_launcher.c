@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   00_atoi_launcher.c                                 :+:      :+:    :+:   */
+/*   00_ft_strlen_launcher.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nozanne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/12 18:46:38 by nozanne           #+#    #+#             */
-/*   Updated: 2017/02/12 21:44:44 by nozanne          ###   ########.fr       */
+/*   Updated: 2017/12/11 17:28:52 by mtassett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <stdio.h>
 #include "../test.h"
 
-uint32_t	ft_strlen_launcher(void)
+uint32_t	strlen_launcher(void)
 {
 	t_unit	*test_list;
 	int		total;

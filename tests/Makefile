@@ -50,7 +50,7 @@ link: $(OBJ) libunit libft
 	@mkdir -p $(NAME_PATH)
 	@$(ECHO) "\x1b[32mDone!"
 	@$(ECHO) "\x1b[33mObject files created, Now linking...\x1b[0m"
-	@$(CC) -o $(NAME_PATH)$(NAME) -L../libft -lft -L../framework -lunit $(INC) $(OBJ)
+	$(CC) -o $(NAME_PATH)$(NAME) $(OBJ) -L../libft -lft -L../framework -lunit $(INC)
 	@$(ECHO) "\x1b[32mDone!\nUnit test compilation sucessfull!\x1b[0m"
 
 $(NAME): link

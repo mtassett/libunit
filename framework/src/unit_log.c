@@ -6,7 +6,7 @@
 /*   By: mtassett <mtassett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/12 16:44:43 by mtassett          #+#    #+#             */
-/*   Updated: 2017/02/12 17:31:42 by mtassett         ###   ########.fr       */
+/*   Updated: 2017/11/28 20:25:07 by mtassett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,21 +67,16 @@ void					unit_log(t_unit *unit, int reset)
 		write(fd, "\n", 1);
 		close(fd);
 		fd = 0;
+		return ;
 	}
-	else
+	if (fd == 0)
 	{
-		if (fd == 0)
+		if ( -1 == (fd = open("./libunit.log", O_CREAT | O_RDWR | O_APPEND, 0600)))
 		{
-			fd = open("./libunit.log", O_CREAT | O_RDWR | O_APPEND);
-			if (fd == -1)
-			{
 				fd = 0;
 				return ;
-			}
-			else
-				chmod("./libunit.log", S_IRUSR | S_IWUSR);
 		}
-		write(fd, unit->u_name, unit_strlen(unit->u_name));
-		write_result(unit->u_ret, fd);
 	}
+	write(fd, unit->u_name, unit_strlen(unit->u_name));
+	write_result(unit->u_ret, fd);
 }

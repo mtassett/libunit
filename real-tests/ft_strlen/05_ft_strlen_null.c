@@ -6,7 +6,7 @@
 /*   By: mtassett <mtassett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/12 20:43:52 by mtassett          #+#    #+#             */
-/*   Updated: 2017/02/12 21:46:51 by mtassett         ###   ########.fr       */
+/*   Updated: 2017/12/11 18:29:15 by mtassett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 
 int		strlen_null(void)
 {
-	ft_strlen(NULL);
-	return (EXIT_SUCCESS);
+	if (ft_strlen(NULL) == 0)
+		return (EXIT_SUCCESS);
+	else
+		return (EXIT_FAILURE);
 }

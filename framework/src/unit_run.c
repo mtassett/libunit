@@ -6,7 +6,7 @@
 /*   By: mtassett <mtassett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/10 22:20:55 by mtassett          #+#    #+#             */
-/*   Updated: 2017/02/12 05:50:34 by nozanne          ###   ########.fr       */
+/*   Updated: 2017/11/28 20:33:28 by mtassett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ static void		print_line(const char *str)
 		++tmp;
 	write(1, "\t> ", 3);
 	write(1, str, tmp - str);
-	write(1, " : ", 3);
+	write(1, "\t:\t", 3);
 }
 
 static int		print_sig(int sig)

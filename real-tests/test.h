@@ -6,7 +6,7 @@
 /*   By: nozanne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/12 21:34:19 by nozanne           #+#    #+#             */
-/*   Updated: 2017/02/12 21:45:22 by nozanne          ###   ########.fr       */
+/*   Updated: 2017/12/12 00:11:37 by mtassett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,7 @@ int			strlen_char_bound(void);
 int			strlen_size_bound(void);
 int			strlen_dirty_buff(void);
 int			strlen_null(void);
+uint32_t	itoabase_launcher(void);
+int			itoabase_zero(void);
 
 #endif

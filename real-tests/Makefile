@@ -28,7 +28,7 @@ SRC_NAME :=	main.c \
 
 OBJ_PATH :=	./obj/
 OBJ_NAME :=	$(SRC_NAME:.c=.o)
-INC_PATH := 	../framework/inc ../libft/inc .
+INC_PATH := ../framework/inc ../libft/inc .
 
 SRC :=		$(addprefix $(SRC_PATH),$(SRC_NAME))
 OBJ :=		$(addprefix $(OBJ_PATH),$(OBJ_NAME))
@@ -62,7 +62,7 @@ link: $(OBJ) libunit libft
 	@mkdir -p $(NAME_PATH)
 	@$(ECHO) "\x1b[32mDone!"
 	@$(ECHO) "\x1b[33mObject files created, Now linking...\x1b[0m"
-	$(CC) -o $(NAME_PATH)$(NAME) -L../libft -lft -L../framework -lunit $(INC) $(OBJ)
+	$(CC) $(INC) $(OBJ) -o $(NAME_PATH)$(NAME) -L../libft -lft -L../framework -lunit
 	@$(ECHO) "\x1b[32mDone!\nUnit test compilation sucessfull!\x1b[0m"
 
 $(NAME): link
