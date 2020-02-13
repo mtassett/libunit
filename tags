@@ -4,73 +4,151 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-BUFFER_SIZ	real-tests/ft_strlen/03_ft_strlen_size_bound.c	19;"	d	file:
-BUFF_SIZE_GNL	framework/inc/libft.h	39;"	d
-BUFF_SIZE_GNL	libft/inc/libft.h	39;"	d
-CPU_RELAX	framework/inc/libft.h	38;"	d
-CPU_RELAX	libft/inc/libft.h	38;"	d
-CYA	framework/inc/libunit.h	20;"	d
-EFAILURE	framework/inc/libunit.h	21;"	d
-EFORK	framework/inc/libunit.h	23;"	d
-EWTF	framework/inc/libunit.h	22;"	d
-GRN	framework/inc/libunit.h	16;"	d
-INCVAL	real-tests/ft_strlen/03_ft_strlen_size_bound.c	18;"	d	file:
-INCVAL	real-tests/ft_strlen/04_ft_strlen_dirty_buff.c	18;"	d	file:
-LIBFT_H	framework/inc/libft.h	14;"	d
-LIBFT_H	libft/inc/libft.h	14;"	d
-LIBUNIT_H	framework/inc/libunit.h	14;"	d
-RED	framework/inc/libunit.h	17;"	d
-RST	framework/inc/libunit.h	18;"	d
-TAB0	framework/inc/libft.h	33;"	d
-TAB0	libft/inc/libft.h	33;"	d
-TAB1	framework/inc/libft.h	24;"	d
-TAB1	libft/inc/libft.h	24;"	d
-TAB2	framework/inc/libft.h	25;"	d
-TAB2	libft/inc/libft.h	25;"	d
-TAB3	framework/inc/libft.h	26;"	d
-TAB3	libft/inc/libft.h	26;"	d
-TAB4	framework/inc/libft.h	27;"	d
-TAB4	libft/inc/libft.h	27;"	d
-TAB5	framework/inc/libft.h	28;"	d
-TAB5	libft/inc/libft.h	28;"	d
-TAB6	framework/inc/libft.h	29;"	d
-TAB6	libft/inc/libft.h	29;"	d
-TAB7	framework/inc/libft.h	30;"	d
-TAB7	libft/inc/libft.h	30;"	d
-TAB8	framework/inc/libft.h	31;"	d
-TAB8	libft/inc/libft.h	31;"	d
-TAB9	framework/inc/libft.h	32;"	d
-TAB9	libft/inc/libft.h	32;"	d
-TABA	framework/inc/libft.h	34;"	d
-TABA	libft/inc/libft.h	34;"	d
-TABB	framework/inc/libft.h	35;"	d
-TABB	libft/inc/libft.h	35;"	d
-TABC	framework/inc/libft.h	36;"	d
-TABC	libft/inc/libft.h	36;"	d
-TEST_H	real-tests/test.h	14;"	d
-TEST_H	tests/test.h	14;"	d
-UNIT_FAIL	framework/inc/libunit.h	26;"	d
-UNIT_TIMEOUT	framework/inc/libunit.h	24;"	d
-UNIT_TOT	framework/inc/libunit.h	25;"	d
-UTOA	framework/inc/libft.h	37;"	d
-UTOA	libft/inc/libft.h	37;"	d
-YLW	framework/inc/libunit.h	19;"	d
-atoi_blank	real-tests/atoi/11_atoi_blank.c	/^int		atoi_blank(void)$/;"	f
-atoi_hardtest	real-tests/atoi/15_atoi_hardtest.c	/^int		atoi_hardtest(void)$/;"	f
-atoi_intmax	real-tests/atoi/09_atoi_intmax.c	/^int		atoi_intmax(void)$/;"	f
-atoi_intmin	real-tests/atoi/08_atoi_intmin.c	/^int		atoi_intmin(void)$/;"	f
+BUFFER_SIZ	real-tests/ft_strlen/03_ft_strlen_size_bound.c	/^#define BUFFER_SIZ	/;"	d	file:
+BUFFER_SIZ	real-tests/strlen2/03_strlen2_size_bound.c	/^#define BUFFER_SIZ	/;"	d	file:
+BUFF_SIZE_GNL	framework/inc/libft.h	/^# define BUFF_SIZE_GNL	/;"	d
+BUFF_SIZE_GNL	libft/inc/libft.h	/^# define BUFF_SIZE_GNL	/;"	d
+CPU_RELAX	framework/inc/libft.h	/^# define CPU_RELAX(/;"	d
+CPU_RELAX	libft/inc/libft.h	/^# define CPU_RELAX(/;"	d
+CYA	framework/inc/libunit.h	/^# define CYA	/;"	d
+EFAILURE	framework/inc/libunit.h	/^# define EFAILURE	/;"	d
+EFORK	framework/inc/libunit.h	/^# define EFORK	/;"	d
+EWTF	framework/inc/libunit.h	/^# define EWTF	/;"	d
+GRN	framework/inc/libunit.h	/^# define GRN	/;"	d
+INCVAL	real-tests/ft_strlen/03_ft_strlen_size_bound.c	/^#define INCVAL	/;"	d	file:
+INCVAL	real-tests/ft_strlen/04_ft_strlen_dirty_buff.c	/^#define INCVAL	/;"	d	file:
+INCVAL	real-tests/strlen2/03_strlen2_size_bound.c	/^#define INCVAL	/;"	d	file:
+INCVAL	real-tests/strlen2/04_strlen2_dirty_buff.c	/^#define INCVAL	/;"	d	file:
+LIBFT_H	framework/inc/libft.h	/^# define LIBFT_H$/;"	d
+LIBFT_H	libft/inc/libft.h	/^# define LIBFT_H$/;"	d
+LIBUNIT_H	framework/inc/libunit.h	/^# define LIBUNIT_H$/;"	d
+RED	framework/inc/libunit.h	/^# define RED	/;"	d
+RST	framework/inc/libunit.h	/^# define RST /;"	d
+TAB0	framework/inc/libft.h	/^# define TAB0 /;"	d
+TAB0	libft/inc/libft.h	/^# define TAB0 /;"	d
+TAB1	framework/inc/libft.h	/^# define TAB1 /;"	d
+TAB1	libft/inc/libft.h	/^# define TAB1 /;"	d
+TAB2	framework/inc/libft.h	/^# define TAB2 /;"	d
+TAB2	libft/inc/libft.h	/^# define TAB2 /;"	d
+TAB3	framework/inc/libft.h	/^# define TAB3 /;"	d
+TAB3	libft/inc/libft.h	/^# define TAB3 /;"	d
+TAB4	framework/inc/libft.h	/^# define TAB4 /;"	d
+TAB4	libft/inc/libft.h	/^# define TAB4 /;"	d
+TAB5	framework/inc/libft.h	/^# define TAB5 /;"	d
+TAB5	libft/inc/libft.h	/^# define TAB5 /;"	d
+TAB6	framework/inc/libft.h	/^# define TAB6 /;"	d
+TAB6	libft/inc/libft.h	/^# define TAB6 /;"	d
+TAB7	framework/inc/libft.h	/^# define TAB7 /;"	d
+TAB7	libft/inc/libft.h	/^# define TAB7 /;"	d
+TAB8	framework/inc/libft.h	/^# define TAB8 /;"	d
+TAB8	libft/inc/libft.h	/^# define TAB8 /;"	d
+TAB9	framework/inc/libft.h	/^# define TAB9 /;"	d
+TAB9	libft/inc/libft.h	/^# define TAB9 /;"	d
+TABA	framework/inc/libft.h	/^# define TABA /;"	d
+TABA	libft/inc/libft.h	/^# define TABA /;"	d
+TABB	framework/inc/libft.h	/^# define TABB /;"	d
+TABB	libft/inc/libft.h	/^# define TABB /;"	d
+TABC	framework/inc/libft.h	/^# define TABC /;"	d
+TABC	libft/inc/libft.h	/^# define TABC /;"	d
+TEST_H	real-tests/test.h	/^#define TEST_H$/;"	d
+TEST_H	tests/test.h	/^# define TEST_H$/;"	d
+UNIT_FAIL	framework/inc/libunit.h	/^# define UNIT_FAIL(/;"	d
+UNIT_TIMEOUT	framework/inc/libunit.h	/^# define UNIT_TIMEOUT	/;"	d
+UNIT_TOT	framework/inc/libunit.h	/^# define UNIT_TOT(/;"	d
+UTOA	framework/inc/libft.h	/^# define UTOA /;"	d
+UTOA	libft/inc/libft.h	/^# define UTOA /;"	d
+YLW	framework/inc/libunit.h	/^# define YLW	/;"	d
+atoi_bignbr_42	real-tests/atoi/02_atoi_bignbr.c	/^int		atoi_bignbr_42(void)$/;"	f
+atoi_bignbr_minus10kM	real-tests/atoi/02_atoi_bignbr.c	/^int		atoi_bignbr_minus10kM(void)$/;"	f
+atoi_bignbr_minus42	real-tests/atoi/02_atoi_bignbr.c	/^int		atoi_bignbr_minus42(void)$/;"	f
+atoi_bignbr_plus10kM	real-tests/atoi/02_atoi_bignbr.c	/^int		atoi_bignbr_plus10kM(void)$/;"	f
+atoi_bignbr_plus42	real-tests/atoi/02_atoi_bignbr.c	/^int		atoi_bignbr_plus42(void)$/;"	f
+atoi_blank_empty	real-tests/atoi/07_atoi_blanks.c	/^int		atoi_blank_empty(void)$/;"	f
+atoi_blank_null	real-tests/atoi/07_atoi_blanks.c	/^int		atoi_blank_null(void)$/;"	f
+atoi_blank_tab	real-tests/atoi/07_atoi_blanks.c	/^int		atoi_blank_tab(void)$/;"	f
+atoi_blank_whsp	real-tests/atoi/07_atoi_blanks.c	/^int		atoi_blank_whsp(void)$/;"	f
+atoi_blank	real-tests/atol/11_atol_blank.c	/^int		atoi_blank(void)$/;"	f
+atoi_combo_blanknumspace	real-tests/atoi/09_atoi_combo.c	/^int		atoi_combo_blanknumspace(void)$/;"	f
+atoi_combo_blanknumspacenum	real-tests/atoi/09_atoi_combo.c	/^int		atoi_combo_blanknumspacenum(void)$/;"	f
+atoi_combo_charnum	real-tests/atoi/09_atoi_combo.c	/^int		atoi_combo_charnum(void)$/;"	f
+atoi_combo_comma	real-tests/atoi/09_atoi_combo.c	/^int		atoi_combo_comma(void)$/;"	f
+atoi_combo_hard2	real-tests/atoi/09_atoi_combo.c	/^int		atoi_combo_hard2(void)$/;"	f
+atoi_combo_hard3	real-tests/atoi/09_atoi_combo.c	/^int		atoi_combo_hard3(void)$/;"	f
+atoi_combo_hard	real-tests/atoi/09_atoi_combo.c	/^int		atoi_combo_hard(void)$/;"	f
+atoi_combo_numsignnum2	real-tests/atoi/09_atoi_combo.c	/^int		atoi_combo_numsignnum2(void)$/;"	f
+atoi_combo_numsignnum	real-tests/atoi/09_atoi_combo.c	/^int		atoi_combo_numsignnum(void)$/;"	f
+atoi_combo_signstr	real-tests/atoi/09_atoi_combo.c	/^int		atoi_combo_signstr(void)$/;"	f
+atoi_combo_signstrspacenum	real-tests/atoi/09_atoi_combo.c	/^int		atoi_combo_signstrspacenum(void)$/;"	f
+atoi_combo_spacedblsignnumspace	real-tests/atoi/09_atoi_combo.c	/^int		atoi_combo_spacedblsignnumspace(void)$/;"	f
+atoi_combo_spacenum	real-tests/atoi/09_atoi_combo.c	/^int		atoi_combo_spacenum(void)$/;"	f
+atoi_combo_spacenumspace	real-tests/atoi/09_atoi_combo.c	/^int		atoi_combo_spacenumspace(void)$/;"	f
+atoi_combo_spacesignnum2	real-tests/atoi/09_atoi_combo.c	/^int		atoi_combo_spacesignnum2(void)$/;"	f
+atoi_combo_spacesignnum	real-tests/atoi/09_atoi_combo.c	/^int		atoi_combo_spacesignnum(void)$/;"	f
+atoi_combo_spacestrnum	real-tests/atoi/09_atoi_combo.c	/^int		atoi_combo_spacestrnum(void)$/;"	f
+atoi_combo_tabnumstr	real-tests/atoi/09_atoi_combo.c	/^int		atoi_combo_tabnumstr(void)$/;"	f
+atoi_combo_tabstrnum	real-tests/atoi/09_atoi_combo.c	/^int		atoi_combo_tabstrnum(void)$/;"	f
+atoi_dblsig_mm	real-tests/atoi/04_atoi_dblsig.c	/^int		atoi_dblsig_mm(void)$/;"	f
+atoi_dblsig_mp	real-tests/atoi/04_atoi_dblsig.c	/^int		atoi_dblsig_mp(void)$/;"	f
+atoi_dblsig_pm	real-tests/atoi/04_atoi_dblsig.c	/^int		atoi_dblsig_pm(void)$/;"	f
+atoi_dblsig_pp	real-tests/atoi/04_atoi_dblsig.c	/^int		atoi_dblsig_pp(void)$/;"	f
+atoi_hardtest	real-tests/atol/15_atol_hardtest.c	/^int		atoi_hardtest(void)$/;"	f
+atoi_intmax	real-tests/atol/09_atol_intmax.c	/^int		atoi_intmax(void)$/;"	f
+atoi_intmin	real-tests/atol/08_atol_intmin.c	/^int		atoi_intmin(void)$/;"	f
 atoi_launcher	real-tests/atoi/00_atoi_launcher.c	/^uint32_t	atoi_launcher(void)$/;"	f
-atoi_letter	real-tests/atoi/02_atoi_letter.c	/^int		atoi_letter(void)$/;"	f
-atoi_nbr	real-tests/atoi/01_atoi_nbr.c	/^int		atoi_nbr(void)$/;"	f
-atoi_nbrnletter	real-tests/atoi/03_atoi_nbrnletter.c	/^int		atoi_nbrnletter(void)$/;"	f
-atoi_negnbr	real-tests/atoi/05_atoi_negnbr.c	/^int		atoi_negnbr(void)$/;"	f
-atoi_negsign	real-tests/atoi/06_atoi_negsign.c	/^int		atoi_negsign(void)$/;"	f
-atoi_nothing	real-tests/atoi/13_atoi_nothing.c	/^int		atoi_nothing(void)$/;"	f
-atoi_null	real-tests/atoi/14_atoi_null.c	/^int		atoi_null(void)$/;"	f
-atoi_posnneg	real-tests/atoi/10_atoi_posnneg.c	/^int		atoi_posnneg(void)$/;"	f
-atoi_possign	real-tests/atoi/07_atoi_possign.c	/^int		atoi_possign(void)$/;"	f
-atoi_spaces	real-tests/atoi/04_atoi_spaces.c	/^int		atoi_spaces(void)$/;"	f
-atoi_zero	real-tests/atoi/12_atoi_zero.c	/^int		atoi_zero(void)$/;"	f
+atoi_launcher	real-tests/atol/00_atol_launcher.c	/^uint32_t	atoi_launcher(void)$/;"	f
+atoi_letter	real-tests/atol/02_atol_letter.c	/^int		atoi_letter(void)$/;"	f
+atoi_nbr_10	real-tests/atoi/01_atoi_nbr.c	/^int		atoi_nbr_10(void)$/;"	f
+atoi_nbr_16	real-tests/atoi/01_atoi_nbr.c	/^int		atoi_nbr_16(void)$/;"	f
+atoi_nbr_1	real-tests/atoi/01_atoi_nbr.c	/^int		atoi_nbr_1(void)$/;"	f
+atoi_nbr_ez	real-tests/atoi/01_atoi_nbr.c	/^int		atoi_nbr_ez(void)$/;"	f
+atoi_nbr_intmax	real-tests/atoi/01_atoi_nbr.c	/^int		atoi_nbr_intmax(void)$/;"	f
+atoi_nbr_intmin	real-tests/atoi/01_atoi_nbr.c	/^int		atoi_nbr_intmin(void)$/;"	f
+atoi_nbr_minus100M	real-tests/atoi/01_atoi_nbr.c	/^int		atoi_nbr_minus100M(void)$/;"	f
+atoi_nbr_minus100	real-tests/atoi/01_atoi_nbr.c	/^int		atoi_nbr_minus100(void)$/;"	f
+atoi_nbr_minus100k	real-tests/atoi/01_atoi_nbr.c	/^int		atoi_nbr_minus100k(void)$/;"	f
+atoi_nbr_minus10M	real-tests/atoi/01_atoi_nbr.c	/^int		atoi_nbr_minus10M(void)$/;"	f
+atoi_nbr_minus10	real-tests/atoi/01_atoi_nbr.c	/^int		atoi_nbr_minus10(void)$/;"	f
+atoi_nbr_minus10k	real-tests/atoi/01_atoi_nbr.c	/^int		atoi_nbr_minus10k(void)$/;"	f
+atoi_nbr_minus1M	real-tests/atoi/01_atoi_nbr.c	/^int		atoi_nbr_minus1M(void)$/;"	f
+atoi_nbr_minus1	real-tests/atoi/01_atoi_nbr.c	/^int		atoi_nbr_minus1(void)$/;"	f
+atoi_nbr_minus1kM	real-tests/atoi/01_atoi_nbr.c	/^int		atoi_nbr_minus1kM(void)$/;"	f
+atoi_nbr_minus1k	real-tests/atoi/01_atoi_nbr.c	/^int		atoi_nbr_minus1k(void)$/;"	f
+atoi_nbr_neg	real-tests/atoi/01_atoi_nbr.c	/^int		atoi_nbr_neg(void)$/;"	f
+atoi_nbr_plus100M	real-tests/atoi/01_atoi_nbr.c	/^int		atoi_nbr_plus100M(void)$/;"	f
+atoi_nbr_plus100	real-tests/atoi/01_atoi_nbr.c	/^int		atoi_nbr_plus100(void)$/;"	f
+atoi_nbr_plus100k	real-tests/atoi/01_atoi_nbr.c	/^int		atoi_nbr_plus100k(void)$/;"	f
+atoi_nbr_plus10M	real-tests/atoi/01_atoi_nbr.c	/^int		atoi_nbr_plus10M(void)$/;"	f
+atoi_nbr_plus10	real-tests/atoi/01_atoi_nbr.c	/^int		atoi_nbr_plus10(void)$/;"	f
+atoi_nbr_plus10k	real-tests/atoi/01_atoi_nbr.c	/^int		atoi_nbr_plus10k(void)$/;"	f
+atoi_nbr_plus1M	real-tests/atoi/01_atoi_nbr.c	/^int		atoi_nbr_plus1M(void)$/;"	f
+atoi_nbr_plus1	real-tests/atoi/01_atoi_nbr.c	/^int		atoi_nbr_plus1(void)$/;"	f
+atoi_nbr_plus1kM	real-tests/atoi/01_atoi_nbr.c	/^int		atoi_nbr_plus1kM(void)$/;"	f
+atoi_nbr_plus1k	real-tests/atoi/01_atoi_nbr.c	/^int		atoi_nbr_plus1k(void)$/;"	f
+atoi_nbr_pos	real-tests/atoi/01_atoi_nbr.c	/^int		atoi_nbr_pos(void)$/;"	f
+atoi_nbrnletter	real-tests/atol/03_atol_nbrnletter.c	/^int		atoi_nbrnletter(void)$/;"	f
+atoi_negnbr	real-tests/atol/05_atol_negnbr.c	/^int		atoi_negnbr(void)$/;"	f
+atoi_negsign	real-tests/atol/06_atol_negsign.c	/^int		atoi_negsign(void)$/;"	f
+atoi_nothing	real-tests/atol/13_atol_nothing.c	/^int		atoi_nothing(void)$/;"	f
+atoi_null	real-tests/atol/14_atol_null.c	/^int		atoi_null(void)$/;"	f
+atoi_posnneg	real-tests/atol/10_atol_posnneg.c	/^int		atoi_posnneg(void)$/;"	f
+atoi_possign	real-tests/atol/07_atol_possign.c	/^int		atoi_possign(void)$/;"	f
+atoi_raw_datanum	real-tests/atoi/08_atoi_raw.c	/^int		atoi_raw_datanum(void)$/;"	f
+atoi_raw_numdata	real-tests/atoi/08_atoi_raw.c	/^int		atoi_raw_numdata(void)$/;"	f
+atoi_sign_minus	real-tests/atoi/06_atoi_sign.c	/^int		atoi_sign_minus(void)$/;"	f
+atoi_sign_plus	real-tests/atoi/06_atoi_sign.c	/^int		atoi_sign_plus(void)$/;"	f
+atoi_spaces	real-tests/atol/04_atol_spaces.c	/^int		atoi_spaces(void)$/;"	f
+atoi_str_abcdef	real-tests/atoi/05_atoi_str.c	/^int		atoi_str_abcdef(void)$/;"	f
+atoi_str_char	real-tests/atoi/05_atoi_str.c	/^int		atoi_str_char(void)$/;"	f
+atoi_str_hard	real-tests/atoi/05_atoi_str.c	/^int		atoi_str_hard(void)$/;"	f
+atoi_str_numstr	real-tests/atoi/05_atoi_str.c	/^int		atoi_str_numstr(void)$/;"	f
+atoi_str_spaces	real-tests/atoi/05_atoi_str.c	/^int		atoi_str_spaces(void)$/;"	f
+atoi_str_strnum	real-tests/atoi/05_atoi_str.c	/^int		atoi_str_strnum(void)$/;"	f
+atoi_test	real-tests/atoi/00_atoi_launcher.c	/^int			atoi_test(const char *str)$/;"	f
+atoi_zero_minus	real-tests/atoi/03_atoi_zero.c	/^int		atoi_zero_minus(void)$/;"	f
+atoi_zero_plus	real-tests/atoi/03_atoi_zero.c	/^int		atoi_zero_plus(void)$/;"	f
+atoi_zero	real-tests/atoi/03_atoi_zero.c	/^int		atoi_zero(void)$/;"	f
+atoi_zero	real-tests/atol/12_atol_zero.c	/^int		atoi_zero(void)$/;"	f
+atol_nbr	real-tests/atol/01_atol_nbr.c	/^int		atol_nbr(void)$/;"	f
 basic_test	tests/strlen/01_basic_test.c	/^int	basic_test(void)$/;"	f
 big_test	tests/strlen/04_big_test.c	/^int	big_test(void)$/;"	f
 buserror	tests/strlen/05_buserror.c	/^int		buserror(void)$/;"	f
@@ -120,7 +198,7 @@ ft_isspace	libft/src/ft_isspace.c	/^inline int	__attribute__((always_inline)) ft
 ft_isupper	libft/src/ft_isupper.c	/^inline int	__attribute__((always_inline)) ft_isupper(int c)$/;"	f
 ft_isxdigit	libft/src/ft_isxdigit.c	/^inline int	__attribute__((always_inline)) ft_isxdigit(int c)$/;"	f
 ft_itoa_buf	libft/src/ft_itoa_buf.c	/^char	*ft_itoa_buf(int n, char *buf)$/;"	f
-ft_itoabase	libft/src/ft_atoibase.c	/^char			*ft_itoabase(int num, int base)$/;"	f
+ft_itoabase	libft/src/ft_itoabase.c	/^char			*ft_itoabase(int num, int base)$/;"	f
 ft_itoa	libft/src/ft_itoa.c	/^char	*ft_itoa(int n)$/;"	f
 ft_join	libft/src/get_next_line.c	/^static size_t	ft_join(char **dst, char *src, t_node *node, bool jump)$/;"	f	file:
 ft_join	libft/src/gnl.c	/^static size_t	ft_join(char **line, char *buf, char *bak, bool jmp)$/;"	f	file:
@@ -204,6 +282,10 @@ ft_xmalloc	libft/src/ft_xmalloc.c	/^void	*ft_xmalloc(size_t siz)$/;"	f
 get_next_line	libft/src/get_next_line.c	/^int		get_next_line(int fd, char **line)$/;"	f
 get_sub_siz	libft/src/ft_strsplit.c	/^static size_t	get_sub_siz(const char *str, char c)$/;"	f	file:
 get_tab_row	libft/src/ft_strsplit.c	/^static size_t	get_tab_row(const char *s, char c)$/;"	f	file:
+getnsiz_basic	real-tests/getnsiz/01_getnsiz_basic.c	/^int		getnsiz_basic(void)$/;"	f
+getnsiz_launcher	real-tests/getnsiz/00_getnsiz_launcher.c	/^uint32_t	getnsiz_launcher(void)$/;"	f
+getnsiz_limit	real-tests/getnsiz/02_getnsiz_limit.c	/^int		getnsiz_limit(void)$/;"	f
+getnsiz_mid	real-tests/getnsiz/03_getnsiz_mid.c	/^int		getnsiz_mid(void)$/;"	f
 getnsiz	framework/src/unit_print.c	/^static inline size_t	getnsiz(int n)$/;"	f	file:
 getsiz_bin2	libft/src/getsiz_bin.c	/^inline static size_t	getsiz_bin2(uint64_t n, size_t r)$/;"	f	file:
 getsiz_bin	libft/src/getsiz_bin.c	/^size_t					getsiz_bin(uint64_t n)$/;"	f
@@ -211,15 +293,28 @@ getsiz_hex2	libft/src/getsiz_hex.c	/^inline static size_t	getsiz_hex2(uint64_t n
 getsiz_hex	libft/src/getsiz_hex.c	/^size_t					getsiz_hex(uint64_t n)$/;"	f
 getsiz_oct2	libft/src/getsiz_oct.c	/^inline static size_t	getsiz_oct2(uint64_t n, size_t r)$/;"	f	file:
 getsiz_oct	libft/src/getsiz_oct.c	/^size_t					getsiz_oct(uint64_t n)$/;"	f
+getunsiz_basic	real-tests/getunsiz/01_getunsiz_basic.c	/^int		getunsiz_basic(void)$/;"	f
+getunsiz_launcher	real-tests/getunsiz/00_getunsiz_launcher.c	/^uint32_t	getunsiz_launcher(void)$/;"	f
+getunsiz_limit	real-tests/getunsiz/02_getunsiz_limit.c	/^int		getunsiz_limit(void)$/;"	f
+getunsiz_mid	real-tests/getunsiz/03_getunsiz_mid.c	/^int		getunsiz_mid(void)$/;"	f
 gnl_worker	libft/src/get_next_line.c	/^static int		gnl_worker(t_node *n, char **line, char *buf)$/;"	f	file:
 gnl	libft/src/gnl.c	/^int		gnl(int fd, char **line)$/;"	f
+itoabase_base10	real-tests/ft_itoabase/01_itoabase_base10.c	/^int		itoabase_base10(void)$/;"	f
+itoabase_base2	real-tests/ft_itoabase/02_itoabase_base2.c	/^int		itoabase_base2(void)$/;"	f
+itoabase_check	real-tests/ft_itoabase/00_ft_itoabase_launcher.c	/^void		itoabase_check(char *str, char *good)$/;"	f
 itoabase_launcher	real-tests/ft_itoabase/00_ft_itoabase_launcher.c	/^uint32_t	itoabase_launcher(void)$/;"	f
-itoabase_zero	real-tests/ft_itoabase/01_itoabase_basic.c	/^int		itoabase_zero(void)$/;"	f
 left	framework/inc/libft.h	/^	struct s_btree	*left;$/;"	m	struct:s_btree	typeref:struct:s_btree::s_btree
 left	libft/inc/libft.h	/^	struct s_btree	*left;$/;"	m	struct:s_btree	typeref:struct:s_btree::s_btree
 locate_separator	libft/src/gnl.c	/^static size_t	locate_separator(const char *str)$/;"	f	file:
 main	real-tests/main.c	/^int		main(void)$/;"	f
 main	tests/main.c	/^int		main(void)$/;"	f
+memcmp_basic_equal	real-tests/memcmp/01_memcmp_basic_equal.c	/^int		memcmp_basic_equal(void)$/;"	f
+memcmp_basic_siz2	real-tests/memcmp/04_memcmp_basic_siz2.c	/^int		memcmp_basic_siz2(void)$/;"	f
+memcmp_basic_siz	real-tests/memcmp/03_memcmp_basic_siz.c	/^int		memcmp_basic_siz(void)$/;"	f
+memcmp_basic_uneq	real-tests/memcmp/02_memcmp_basic_uneq.c	/^int		memcmp_basic_uneq(void)$/;"	f
+memcmp_launcher	real-tests/memcmp/00_memcmp_launcher.c	/^uint32_t	memcmp_launcher(void)$/;"	f
+memcmp_med_equal	real-tests/memcmp/05_memcmp_med_equal.c	/^int		memcmp_med_equal(void)$/;"	f
+memcmp_med_uneq	real-tests/memcmp/06_memcmp_med_uneq.c	/^int		memcmp_med_uneq(void)$/;"	f
 n_buf	framework/inc/libft.h	/^	char			*n_buf;$/;"	m	struct:s_node
 n_buf	libft/inc/libft.h	/^	char			*n_buf;$/;"	m	struct:s_node
 n_fd	framework/inc/libft.h	/^	int				n_fd;$/;"	m	struct:s_node
@@ -255,6 +350,16 @@ s_unit	framework/inc/libunit.h	/^typedef struct		s_unit$/;"	s
 s_vec	framework/inc/libft.h	/^typedef struct		s_vec$/;"	s
 s_vec	libft/inc/libft.h	/^typedef struct		s_vec$/;"	s
 segv_test	tests/strlen/03_segv_test.c	/^int		segv_test(void)$/;"	f
+strchr_launcher	real-tests/strchr/00_strchr_launcher.c	/^uint32_t	strchr_launcher(void)$/;"	f
+strchr_search_abs	real-tests/strchr/03_strchr_search_abs.c	/^int		strchr_search_abs(void)$/;"	f
+strchr_search_char	real-tests/strchr/01_strchr_search_char.c	/^int		strchr_search_char(void)$/;"	f
+strchr_space	real-tests/strchr/02_strchr_space.c	/^int		strchr_space(void)$/;"	f
+strlen2_basic	real-tests/strlen2/01_strlen2_basic.c	/^int		strlen2_basic(void)$/;"	f
+strlen2_char_bound	real-tests/strlen2/02_strlen2_char_bound.c	/^int		strlen2_char_bound(void)$/;"	f
+strlen2_dirty_buff	real-tests/strlen2/04_strlen2_dirty_buff.c	/^int		strlen2_dirty_buff(void)$/;"	f
+strlen2_launcher	real-tests/strlen2/00_strlen2_launcher.c	/^uint32_t	strlen2_launcher(void)$/;"	f
+strlen2_null	real-tests/strlen2/05_strlen2_null.c	/^int		strlen2_null(void)$/;"	f
+strlen2_size_bound	real-tests/strlen2/03_strlen2_size_bound.c	/^int		strlen2_size_bound(void)$/;"	f
 strlen_basic	real-tests/ft_strlen/01_ft_strlen_basic.c	/^int		strlen_basic(void)$/;"	f
 strlen_char_bound	real-tests/ft_strlen/02_ft_strlen_char_bound.c	/^int		strlen_char_bound(void)$/;"	f
 strlen_dirty_buff	real-tests/ft_strlen/04_ft_strlen_dirty_buff.c	/^int		strlen_dirty_buff(void)$/;"	f
@@ -305,7 +410,7 @@ vec_getindex	libft/src/vec_getindex.c	/^void	*vec_getindex(t_vec *vec, size_t in
 vec_init	libft/src/vec_init.c	/^void	vec_init(t_vec *vec, size_t siz)$/;"	f
 vec_realloc	libft/src/vec_realloc.c	/^void	vec_realloc(t_vec **vec)$/;"	f
 vec_set	libft/src/vec_set.c	/^int		vec_set(t_vec *vec, void *new, size_t index)$/;"	f
-worker	libft/src/ft_atoibase.c	/^static void		worker(long val, int base, char *out, int *rank)$/;"	f	file:
+worker	libft/src/ft_itoabase.c	/^static void		worker(long val, int base, char *out, int *rank)$/;"	f	file:
 worker	libft/src/ft_strjoinf.c	/^static void	worker(size_t siz, char *dst, char *src)$/;"	f	file:
 write_num	framework/src/unit_print.c	/^static void				write_num(int i)$/;"	f	file:
 write_result	framework/src/unit_log.c	/^static inline void		write_result(int res, int fd)$/;"	f	file:

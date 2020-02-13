@@ -1,6 +1,6 @@
-syn keyword CTagsStructure s_sstr s_btree s_list s_vec s_node s_dlst
-syn keyword CTagsMember v_lim next content_size content s_str n_buf left v_siz s_siz right prev v_data n_fd
-syn keyword CTagsFunction print_result unit_load unit_print
-syn keyword CTagsType t_str t_node t_dlst t_uint128 t_list t_vec t_int128 t_btree
-syn keyword CTagsDefinedName BUFF_SIZE_GNL GET_TOT TAB7 TAB5 UTOA TAB3 GET_SUC LIBFT_H TAB2 TABA CYA TAB8 GRN TAB9 LIBUNIT_H YLW TAB1 RED TABB TAB0 RST TAB6 TABC TAB4 CPU_RELAX
+syn keyword CTagsStructure s_sstr s_unit s_btree s_vec s_dlst s_node s_list
+syn keyword CTagsMember content_size s_siz left n_buf content v_lim n_fd s_str u_ret u_test v_siz v_data next right u_next u_name prev
+syn keyword CTagsFunction getnsiz unit_exec unit_out unit_log write_num print_sig unit_free unit_load print_line write_result unit_strlen unit_run unit_print print_result
+syn keyword CTagsType t_node t_list t_int128 t_btree t_unit t_dlst t_str t_vec t_uint128
+syn keyword CTagsDefinedName EFAILURE RST TABC TAB5 TAB4 TABA TAB1 TABB UTOA TAB8 GRN TAB2 TAB9 TAB0 EFORK EWTF UNIT_FAIL TAB7 CPU_RELAX TAB6 BUFF_SIZE_GNL YLW TAB3 UNIT_TOT LIBFT_H RED UNIT_TIMEOUT CYA LIBUNIT_H
 

@@ -1,25 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   04_atoi_spaces.c                                   :+:      :+:    :+:   */
+/*   07_atoi_blanks.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nozanne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/02/12 20:45:52 by nozanne           #+#    #+#             */
-/*   Updated: 2017/02/12 21:29:10 by nozanne          ###   ########.fr       */
+/*   Created: 2017/02/12 20:47:08 by nozanne           #+#    #+#             */
+/*   Updated: 2020/02/13 18:35:50 by mtassett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include "libft.h"
 #include "test.h"
 
-int		atoi_spaces(void)
+int		atoi_blank_tab(void)
 {
-	const char	str[] = "       ";
+	const char	str[] = "\t\t\t\t";
 
-	if (ft_atoi(str) == atoi(str))
-		return (EXIT_SUCCESS);
-	else
-		return (EXIT_FAILURE);
+	return (atoi_test(str));
+}
+
+int		atoi_blank_empty(void)
+{
+	const char	str[] = "";
+
+	return (atoi_test(str));
+}
+
+int		atoi_blank_null(void)
+{
+	const char	*str = NULL;
+
+	return (atoi_test(str));
+}
+
+int		atoi_blank_whsp(void)
+{
+	const char	str[] = "\t\r\v";
+
+	return (atoi_test(str));
 }

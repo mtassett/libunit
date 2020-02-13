@@ -1,25 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   12_atoi_zero.c                                     :+:      :+:    :+:   */
+/*   04_atoi_dblsig.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nozanne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/02/12 21:15:09 by nozanne           #+#    #+#             */
-/*   Updated: 2017/02/12 21:15:27 by nozanne          ###   ########.fr       */
+/*   Created: 2017/02/12 20:45:52 by nozanne           #+#    #+#             */
+/*   Updated: 2020/02/13 18:30:22 by mtassett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include "libft.h"
 #include "test.h"
 
-int		atoi_zero(void)
+int		atoi_dblsig_pp(void)
 {
-	const char	str[] = "0";
+	const char	str[] = "++42";
 
-	if (ft_atoi(str) == atoi(str))
-		return (EXIT_SUCCESS);
-	else
-		return (EXIT_FAILURE);
+	return (atoi_test(str));
+}
+
+int		atoi_dblsig_mm(void)
+{
+	const char	str[] = "--42";
+
+	return (atoi_test(str));
+}
+
+int		atoi_dblsig_pm(void)
+{
+	const char	str[] = "+-42";
+
+	return (atoi_test(str));
+}
+
+int		atoi_dblsig_mp(void)
+{
+	const char	str[] = "-+42";
+
+	return (atoi_test(str));
 }

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   load_test.c                                        :+:      :+:    :+:   */
+/*   unit_load.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtassett <mtassett@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/10 22:20:55 by mtassett          #+#    #+#             */
-/*   Updated: 2017/02/12 19:23:26 by nozanne          ###   ########.fr       */
+/*   Updated: 2020/02/13 16:49:46 by mtassett         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int		unit_load(t_unit **alst, const char *name, int (*test_fun)(void))
 	new->u_name = name;
 	new->u_test = test_fun;
 	new->u_next = NULL;
-	new->u_ret = 0xBADC0FFE;
+	new->u_ret = 0xBADDCAFE;
 	if (!*alst)
 		*alst = new;
 	else
